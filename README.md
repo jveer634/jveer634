@@ -8,7 +8,7 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on Django
 - 🌱 I’m currently learning React
 - 👯 I’m looking to collaborate on Django, Python, React
-- 🤔 I’m looking for help with ...
+- 🤔 I’m looking for help with Django
 - 📫 How to reach me:  [Email](mailto:jveer.nalam@gmail.com)   [Linkedin](https://www.linkedin.com/in/jveernalam)
 
 
