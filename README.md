@@ -8,7 +8,7 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on Django
 - 🌱 I’m currently learning React
 - 👯 I’m looking to collaborate on Django, Python, React
-- 🤔 I’m looking for help with Django
+- 🤔 I’m looking for internship on Blockchain.
 - 📫 How to reach me:  [Email](mailto:jveer.nalam@gmail.com)   [Linkedin](https://www.linkedin.com/in/jveernalam)
 - NEW YEAR RESOLUTION: Get more green squares with contributions of course! And meet new devs around the world...
 
