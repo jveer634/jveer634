@@ -12,4 +12,5 @@ Here are some ideas to get you started:
 - 📫 How to reach me:  [Email](mailto:jveer.nalam@gmail.com)   [Linkedin](https://www.linkedin.com/in/jveernalam)
 
 
-![github stats](https://github-readme-stats.vercel.app/api?username=jveer634&show_icons=true)
+<!-- ![github stats](https://github-readme-stats.vercel.app/api?username=jveer634&show_icons=true) -->
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jveer634)
