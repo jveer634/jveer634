@@ -1,3 +1,4 @@
+<img alt="" src="./Media/Banner.png" />
 ### Hi there 👋 This is #Jay
 
 I am a Blockchain Engineer. And my favorite thing about the job is.. I can confuse non-programmers with words like Proof-of-Stake, Consensus, Staking etc.. 😉
