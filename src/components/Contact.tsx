@@ -1,9 +1,8 @@
-import { BsGithub } from "react-icons/bs";
-import { FiLinkedin } from "react-icons/fi";
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
 
+import { useRef } from "react";
 import { toast } from "react-toastify";
 
 const Contact = () => {
@@ -14,10 +13,10 @@ const Contact = () => {
         toast
             .promise(
                 emailjs.sendForm(
-                    "service_rpjqf9d",
-                    "template_8twr1em",
+                    import.meta.env.VITE_SERVICE_ID,
+                    import.meta.env.VITE_TEMPLATE_ID,
                     form.current as any,
-                    "0NvkpDqbOT69_JTcZ"
+                    import.meta.env.VITE_PUBLIC_KEY
                 ),
                 {
                     pending: "Sending message...",
@@ -29,66 +28,57 @@ const Contact = () => {
             .catch((error) => console.log(error));
     };
     return (
-        <div className="space-y-3 mt-12 md:mt-0 mx-auto max-w-4xl" id="contact">
-            <h4 className="text-xl">You can connect with me on : </h4>
-            <div className="my-1 flex gap-5">
-                <a
-                    href="https://www.linkedin.com/in/jveernalam/"
-                    className="text-lg py-2 "
-                >
-                    <FiLinkedin size={28} />
-                    LinkedIn
-                </a>
+        <div className="bg-black text-slate-100 min-h-screen  px-16 ">
+            <section className=" md:max-w-5xl space-y-4 md:pt-[20%] lg:[pt:10%] pt-[40%] mx-auto font-thin">
+                <h1 className="text-6xl font-nostalgia ">
+                    Let's get Connected...
+                </h1>
+                <h4> You can reach out to me on the following </h4>
+                <div className=" flex gap-5 ">
+                    <a href="https://www.linkedin.com/in/jveernalam/">
+                        <BsLinkedin size={24} />
+                        LinkedIn
+                    </a>
+                    <a href="https://www.github.com/jveer634/">
+                        <BsGithub size={24} />
+                        Github
+                    </a>
+                    <a href="https://www.instagram.com/jveer634/">
+                        <BsInstagram size={24} /> Instagram
+                    </a>
+                </div>
 
-                <a
-                    href="https://www.github.com/jveer634/"
-                    className="text-lg py-2"
+                <p>Or drop your details down here</p>
+                <form
+                    ref={form}
+                    onSubmit={handleSubmit}
+                    className="flex flex-col space-y-2 "
                 >
-                    <BsGithub size={28} /> Github
-                </a>
-            </div>
-            <p className="font-medium">Or drop your details down here</p>
-
-            <form
-                ref={form}
-                onSubmit={handleSubmit}
-                className="flex flex-col py-2"
-            >
-                <label htmlFor="name" className="py-2">
-                    Your Name:
-                </label>
-                <input
-                    type="text"
-                    name="user_name"
-                    id="name"
-                    className="p-3 rounded-md"
-                />
-                <label htmlFor="email" className="py-2">
-                    Your email: &nbsp;
-                </label>
-                <input
-                    type="email"
-                    name="user_email"
-                    id="email"
-                    className="p-3 rounded-md"
-                />
-                <label htmlFor="message" className="py-2">
-                    Message
-                </label>
-                <textarea
-                    className="p-3 rounded-md"
-                    name="message"
-                    id="message"
-                    cols={30}
-                    rows={10}
-                ></textarea>
-                <button
-                    type="submit"
-                    className="p-3 mt-6 mb-12 bg-blue-800 text-white "
-                >
-                    Submit
-                </button>
-            </form>
+                    <label htmlFor="name">Name</label>
+                    <input
+                        type="text"
+                        name="user_name"
+                        id="name"
+                        className="p-3 rounded-md text-black"
+                    />
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        name="user_email"
+                        id="email"
+                        className="p-3 rounded-md text-black"
+                    />
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                        className="p-3 rounded-md text-black"
+                        name="message"
+                        id="message"
+                        cols={30}
+                        rows={10}
+                    ></textarea>
+                    <input type="submit" className="p-3 bg-white text-black " />
+                </form>
+            </section>
         </div>
     );
 };

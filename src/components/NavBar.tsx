@@ -5,23 +5,14 @@ import { Link } from "react-router-dom";
 const Nav = () => {
     return (
         <>
-            <nav className="text-lg flex justify-between items-center h-[10vh] ">
-                <h1>
+            <nav className="px-16 text-lg bg-transparent absolute text-white z-10 top-0 left-0 flex w-full justify-between items-around md:py-16 p-4 ">
+                <h1 className="drop-shadow-lg shadow-slate-300">
                     <Link to="/">
                         <img src={Logo} className=" rounded-full h-10" />
                     </Link>
                 </h1>
-
                 <ul className="flex ">
-                    <li className="hover:text-white hover:bg-blue-800 p-3 rounded-md ">
-                        <Link className="block" to="/projects">
-                            Projects
-                        </Link>
-                    </li>
-                    {/* <li className="hover:text-white hover:bg-blue-800 p-3 rounded-md">
-                        <Link to="/experience">Experience</Link>
-                    </li> */}
-                    <li className="hover:text-white hover:bg-blue-800 p-3 rounded-md">
+                    <li className=" p-2 rounded-lg border-white border-2  ">
                         <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
