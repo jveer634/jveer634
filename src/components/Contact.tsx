@@ -34,7 +34,7 @@ const Contact = () => {
                     Let's get Connected...
                 </h1>
                 <h4> You can reach out to me on the following </h4>
-                <div className=" flex gap-5 ">
+                <div className=" flex gap-6  ">
                     <a href="https://www.linkedin.com/in/jveernalam/">
                         <BsLinkedin size={24} />
                         LinkedIn
@@ -52,7 +52,7 @@ const Contact = () => {
                 <form
                     ref={form}
                     onSubmit={handleSubmit}
-                    className="flex flex-col space-y-2 "
+                    className="flex flex-col space-y-6 "
                 >
                     <label htmlFor="name">Name</label>
                     <input
@@ -66,7 +66,7 @@ const Contact = () => {
                         type="email"
                         name="user_email"
                         id="email"
-                        className="p-3 rounded-md text-black"
+                        className="p-3  rounded-md text-black"
                     />
                     <label htmlFor="message">Message</label>
                     <textarea
@@ -76,7 +76,7 @@ const Contact = () => {
                         cols={30}
                         rows={10}
                     ></textarea>
-                    <input type="submit" className="p-3 bg-white text-black " />
+                    <input type="submit" className="p-3 bg-white text-black" />
                 </form>
             </section>
         </div>

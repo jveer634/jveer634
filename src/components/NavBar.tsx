@@ -12,7 +12,7 @@ const Nav = () => {
                     </Link>
                 </h1>
                 <ul className="flex ">
-                    <li className=" p-2 rounded-lg border-white border-2  ">
+                    <li className=" p-2 rounded-lg border-white border-2 px-4  ">
                         <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
