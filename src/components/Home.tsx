@@ -185,7 +185,7 @@ const Home = () => {
             </section>
 
             <footer className="min-h-10 mt-10  text-center">
-                <h2 className="p-4 w-80 mx-auto border-slate-400 border-t-2 ">
+                <h2 className="p-4 w-80 mx-auto border-white border-t-2 ">
                     Thanks for visiting
                 </h2>
             </footer>
