@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 
 import Marquee from "react-fast-marquee";
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 const Home = () => {
     useEffect(() => {
@@ -40,68 +41,67 @@ const Home = () => {
 
     return (
         <div className="bg-black text-slate-100 ">
-            <section className=" intro z-20 w-full h-full bg-black fixed font-extrabold text-4xl md:text-6xl top-0 left-0 flex items-center justify-center">
-                <div className="leading-normal">
-                    <h1 className="text opacity-0">Thinking of levelling </h1>
-                    <h1 className="text opacity-0">up your</h1>
+            <section className=" bg-black intro z-20  h-screen w-full font-extrabold text-4xl md:text-6xl flex flex-col justify-center items-center fixed top-0 left-0">
+                <div>
+                    <h1 className="text opacity-0">Thinking of </h1>
+                    <h1 className="text opacity-0">levelling up your</h1>
                     <h1 className="text opacity-0">business ?</h1>
                 </div>
             </section>
-            <section className="h-screen flex flex-col md:flex-row ">
-                <div className="md:w-1/2 h-1/2 md:h-full ">
+            <section className="flex flex-col md:flex-row h-screen ">
+                <div className=" h-1/2 md:w-1/2 md:h-full ">
                     <img
                         src={Me}
-                        alt=""
                         className="object-cover h-full w-full opacity-0 img"
                     />
                 </div>
-                <div className="md:w-1/2 md:h-full md:flex md:items-center  ">
-                    <div className="p-10  space-y-6  ">
-                        <div className="  relative top-12 opacity-0 animate">
-                            <h1 className="text-3xl sm:text-xl lg:text-6xl font-nostalgia font">
-                                I am
-                                <span className="text-6xl lg:text-8xl  ml-5 ">
-                                    Jay Nalam
-                                </span>
-                            </h1>
-                        </div>
-
-                        <div className="relative top-12 opacity-0 animate ">
-                            <h2 className="text-lg font-extralight  lg:w-10/12 ">
-                                A{" "}
+                <div className="h-1/2  md:w-1/2 md:h-full flex flex-col justify-center px-8 ">
+                    <div className="opacity-0 animate">
+                        <h1 className="text-2xl md:text-3xl font-nostalgia leading-relaxed md:leading-loose ">
+                            I am &nbsp;
+                            <span className="text-5xl lg:text-8xl">
+                                Jay Nalam
+                            </span>
+                        </h1>
+                    </div>
+                    <div>
+                        <div className=" animate opacity-0">
+                            <h2 className="text-md md:text-xl font-extralight  leading-relaxed md:leading-loose">
+                                A &nbsp;
                                 <span className="font-bold">
                                     FREELANCE WEB DEVELOPER
-                                </span>{" "}
-                                and Blockchain Developer from India.
+                                </span>
+                                &nbsp; and Blockchain Developer from India.
                                 <br /> And I create websites that level up the
                                 standards of your business and will boost up
                                 your network.
                             </h2>
                         </div>
-
                         <Link
                             to="/contact"
-                            className="text-black relative top-20 bg-slate-100  p-3 rounded-sm opacity-0 animate"
+                            className="bg-neutral-50  text-black p-2 inline-block mt-4"
                         >
-                            Connect With Me &nbsp;
+                            Connect With Me
                         </Link>
                     </div>
                 </div>
             </section>
-
-            <div className="w-10/12 md:w-8/12 my-36 md:my-48 mx-auto text-xl text-center">
-                <h2 className="m-8 text-2xl ">My Skills</h2>
+            <div className=" md:w-8/12  h-64 md:h-96 grid content-center mx-auto text-xl text-center">
+                <h2 className="text-2xl font-nostalgia tracking-[0.25rem] ">
+                    SKILLS
+                </h2>
                 <Marquee
                     autoFill
                     speed={55}
                     pauseOnHover
                     gradient={true}
                     gradientColor="black"
+                    className="mt-10"
                 >
-                    <p className=" m-2 text-slate-300">Django</p>
-                    <p className=" m-2 text-slate-300">React Js</p>
-                    <p className=" m-2 text-slate-300">REST API</p>
-                    <p className=" m-2 text-slate-300">MySQL</p>
+                    <p className=" m-2">Django</p>
+                    <p className=" m-2">React Js</p>
+                    <p className=" m-2">REST API</p>
+                    <p className=" m-2">MySQL</p>
                 </Marquee>
                 <Marquee
                     autoFill
@@ -109,20 +109,21 @@ const Home = () => {
                     gradient={true}
                     gradientColor="black"
                 >
-                    <p className="text-slate-300 m-2">EVM Blockchains</p>
-                    <p className="text-slate-300 m-2">Solidity</p>
-                    <p className="text-slate-300 m-2">GoLang</p>
-                    <p className="text-slate-300 m-2">Hardhat</p>
+                    <p className="m-2">EVM Blockchains</p>
+                    <p className="m-2">Solidity</p>
+                    <p className="m-2">GoLang</p>
+                    <p className="m-2">Hardhat</p>
                 </Marquee>
             </div>
-
-            <section className="h-screen font-poppins  grid grid-rows-7 gap-10 ">
-                <div className="text-2xl  m-auto mb-0 ">My Previous Works</div>
+            <section className=" font-poppins grid grid-rows-7 gap-y-10">
+                <h2 className="text-2xl font-nostalgia mx-auto tracking-[0.25rem]">
+                    PREVIOUS WORKS
+                </h2>
 
                 <div className=" row-span-2 bg-react bg-cover bg-center bg-no-repeat  ">
-                    <div className=" min-w-[80%] flex gap-10 items-center mx-auto px-4 md:px-10 h-full ">
+                    <div className=" min-w-[80%] flex gap-10 items-center mx-auto p-4 md:px-10 h-full ">
                         <h1 className=" text-2xl w-1/3">Manam Arts Academy</h1>
-                        <ul className=" font-thin space-y-2 text-sm md:text-lg w-2/3 ">
+                        <ul className=" font-thin space-y-2 py-4 text-sm md:text-lg w-2/3 ">
                             <li>
                                 An art academy that teaches musical instruments,
                                 paintings and caligraphy.
@@ -142,11 +143,11 @@ const Home = () => {
                 </div>
 
                 <div className=" row-span-2 bg-eth bg-cover bg-center bg-no-repeat  ">
-                    <div className="  min-w-[80%] flex gap-10 items-center mx-auto px-4 md:px-10 h-full ">
+                    <div className="  min-w-[80%] flex gap-10 items-center mx-auto p-4 md:px-10 h-full ">
                         <h1 className=" text-2xl w-1/3">
                             Arcade Relayer Bridge
                         </h1>
-                        <ul className=" font-thin space-y-2 text-sm md:text-lg w-2/3 ">
+                        <ul className=" font-thin space-y-2 py-4 text-sm md:text-lg w-2/3 ">
                             <li>
                                 Acting as lead blockchain developer in the
                                 relayer bridge, staking portals and other web3
@@ -165,9 +166,9 @@ const Home = () => {
                 </div>
 
                 <div className=" row-span-2 bg-eth2 bg-cover bg-center bg-no-repeat ">
-                    <div className="  min-w-[80%] flex gap-10 items-center mx-auto px-4 md:px-10 h-full ">
+                    <div className="  min-w-[80%] flex gap-10 items-center mx-auto p-4 md:px-10 h-full ">
                         <h1 className=" text-2xl w-1/3">Pacific DeFi</h1>
-                        <ul className=" font-thin space-y-2 text-sm md:text-lg w-2/3 ">
+                        <ul className=" font-thin space-y-2  text-sm md:text-lg w-2/3 ">
                             <li>
                                 A DEX aggregator that supplies your stake to
                                 multiple decentralized exchanges in one
@@ -183,10 +184,18 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
             <footer className="min-h-10 mt-10  text-center">
-                <h2 className="p-4 w-80 mx-auto border-white border-t-2 ">
-                    Thanks for visiting
+                <h2 className="p-4 w-80  mx-auto border-white border-t-2 flex justify-center gap-x-6 ">
+                    <p>Connect with me at</p>
+                    <a href="https://www.linkedin.com/in/jveernalam/">
+                        <BsLinkedin size={20} />
+                    </a>
+                    <a href="https://www.github.com/jveer634/">
+                        <BsGithub size={20} />
+                    </a>
+                    <a href="https://www.instagram.com/jveer634/">
+                        <BsInstagram size={20} />
+                    </a>
                 </h2>
             </footer>
         </div>
