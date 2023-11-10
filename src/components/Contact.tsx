@@ -36,7 +36,7 @@ const Contact = () => {
                     Let's get Connected...
                 </h1>
                 <h4> You can reach out to me on the following </h4>
-                <div className=" flex justify-between w-80">
+                <div className=" flex justify-start gap-8 w-full">
                     <Link
                         to="https://www.linkedin.com/in/jveernalam/"
                         className="inline-block "
@@ -82,7 +82,10 @@ const Contact = () => {
                         cols={30}
                         rows={10}
                     />
-                    <input type="submit" className="p-3  bg-white text-black" />
+                    <input
+                        type="submit"
+                        className="p-3 bg-neutral-50 text-black"
+                    />
                 </form>
             </section>
         </div>
