@@ -41,13 +41,13 @@ const Home = () => {
 
 	return (
 		<div className="bg-black text-slate-100 ">
-			{/* <section className=" bg-black intro z-20  h-screen w-full font-extrabold text-4xl md:text-6xl flex flex-col justify-center items-center fixed top-0 left-0">
-                <div>
-                    <h1 className="text opacity-0">Thinking of </h1>
-                    <h1 className="text opacity-0">levelling up your</h1>
-                    <h1 className="text opacity-0">business ?</h1>
-                </div>
-            </section> */}
+			<section className=" bg-black intro z-20  h-screen w-full font-extrabold text-4xl md:text-6xl flex flex-col justify-center items-center fixed top-0 left-0">
+				<div>
+					<h1 className="text opacity-0">Thinking of </h1>
+					<h1 className="text opacity-0">levelling up your</h1>
+					<h1 className="text opacity-0">business ?</h1>
+				</div>
+			</section>
 			<section className="flex flex-col md:flex-row h-screen ">
 				<div className=" h-1/2 md:w-1/2 md:h-full ">
 					<img
