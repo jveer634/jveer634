@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 
 function App() {
     return (
-        <div className=" bg-sky-50 font-lora grid grid-rows-[10%_1fr_15%]">
+        <div className=" bg-sky-50 grid grid-rows-[auto_1fr_auto]">
             <Navbar />
             <ToastContainer limit={2} hideProgressBar={true} />
             <Routes>

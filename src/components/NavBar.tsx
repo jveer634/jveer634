@@ -1,38 +1,27 @@
-import Logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <>
-            <nav
-                className={`p-6 md:px-16 text-lg absolute text-white z-10 top-0 left-0 flex w-full justify-between items-around md:py-16 `}
+        <nav className="px-10 py-4 md:px-16  flex items-center justify-between  items-around ">
+            <Link
+                to="/"
+                className="font-bold tracking-tighter text-2xl  p-2 border-black"
             >
-                <h1>
-                    <Link to="/">
-                        <img
-                            src={Logo}
-                            className=" rounded-full h-10 md:h-12"
-                        />
-                    </Link>
-                </h1>
+                <p>Jay Nalam</p>
+            </Link>
 
-                <div className="space-x-4">
-                    <Link
-                        to="https://blog.jnalam.dev"
-                        className="bg-neutral-50 text-black py-2 px-4 rounded-lg shadow"
-                    >
-                        Blog
-                    </Link>
-
-                    <Link
-                        to="/contact"
-                        className=" bg-neutral-50 text-black py-2 px-4 rounded-lg shadow"
-                    >
-                        Contact
-                    </Link>
-                </div>
-            </nav>
-        </>
+            <div className="flex relative  gap-4 items-center font-mono uppercase tracking-tight rounded-xl">
+                <Link to="#">About Me</Link>
+                {/* <Link to="#">Services</Link> */}
+                <Link to="#">Projects</Link>
+                <Link to="https://blog.jnalam.dev" target="_blank">
+                    Blog
+                </Link>
+                <Link to="/contact" className="relative underline  rounded-2xl">
+                    Connect
+                </Link>
+            </div>
+        </nav>
     );
 };
 

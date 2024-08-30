@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
     return (
-        <footer className="grid grid-cols-1 items-center md:grid-cols-2 p-10 bg-black text-white md:p-16  gap-10 ">
+        <footer className="grid grid-cols-1  md:grid-cols-2 p-10 bg-black text-white md:p-16  gap-10 ">
             <div className="space-y-2 ">
                 <h2 className="font-bold text-2xl text-orange-600">
                     Let's talk.
@@ -16,29 +18,29 @@ function Footer() {
                     Socials
                 </h3>
                 <div className="*:p-2 from-neutral-900 flex md:flex-col gap-3">
-                    <a
+                    <Link
                         target="_blank"
-                        href="mailto:jveer.nalam@gmail.com"
+                        to="mailto:jveer.nalam@gmail.com"
                         className="hover:underline"
                     >
                         GMail
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                         target="_blank"
-                        href="https://www.github.com/jveer634/"
+                        to="https://www.github.com/jveer634/"
                         className="hover:underline"
                     >
                         Github
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                         target="_blank"
-                        href="https://www.linkedin.com/in/jveernalam/"
+                        to="https://www.linkedin.com/in/jveernalam/"
                         className="hover:underline"
                     >
                         LinkedIn
-                    </a>
+                    </Link>
                 </div>
             </div>
         </footer>
