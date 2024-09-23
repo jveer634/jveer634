@@ -1,134 +1,191 @@
 import { Link } from "react-router-dom";
 
-import Marquee from "react-fast-marquee";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+
+import Arcade from "../assets/arcadenetwork.jpeg";
+import Pacific from "../assets/pacific.jpeg";
 
 const Home = () => {
     return (
-        <main className=" text-slate-100 ">
-            <section className="flex flex-col md:flex-row h-screen ">
-                <div className="h-1/2  md:w-1/2 md:h-full flex flex-col justify-center px-8 ">
-                    <div className=" animate">
-                        <h1 className="text-2xl md:text-3xl font-nostalgia leading-relaxed md:leading-loose ">
-                            I am &nbsp;
-                            <span className="text-5xl lg:text-8xl">
-                                Jay Nalam
-                            </span>
-                        </h1>
-                    </div>
-                    <div>
-                        <div className=" animate ">
-                            <h2 className="text-md md:text-xl font-extralight  leading-relaxed md:leading-loose">
-                                A Blockchain Engineer and Blockchain Developer
-                                from India. And I create websites that level up
-                                the standards of your business and will boost up
-                                your network.
-                            </h2>
-                        </div>
-                        <Link
-                            to="/contact"
-                            className="bg-neutral-50  text-black p-2 inline-block mt-4"
-                        >
-                            Connect With Me
+        <main className="px-10 md:px-16">
+            <section className="my-40 text-center">
+                <div className="space-y-1">
+                    <h2 className="text-3xl font-bold tracking-tighter text-orange-500 md:text-5xl lg:text-7xl">
+                        Building the Future of Web3
+                    </h2>
+                    <h3 className="font-mono tracking-tighter opacity-75 md:text-xl lg:text-2xl">
+                        Crafting blockchain solutions that drive innovation
+                    </h3>
+                </div>
+
+                <ul className="mt-3 flex justify-center gap-3">
+                    <li>
+                        <Link to="#">
+                            <Button variant="secondary"> See My Work </Button>
                         </Link>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <Link to="#">
+                            <Button variant="default">Get in Touch</Button>
+                        </Link>
+                    </li>
+                </ul>
             </section>
-            <div className=" md:w-8/12  h-64 md:h-96 grid content-center mx-auto text-xl text-center">
-                <h2 className="text-2xl font-nostalgia tracking-[0.25rem] ">
-                    SKILLS
+            <div className="my-10">
+                <h2 className="font-nostalgia mb-8 text-center text-lg tracking-[0.25rem] md:text-xl lg:text-2xl">
+                    SERVICES
                 </h2>
-                <Marquee
-                    autoFill
-                    speed={55}
-                    pauseOnHover
-                    gradient={true}
-                    gradientColor="black"
-                    className="mt-10"
-                >
-                    <p className=" m-2">Django</p>
-                    <p className=" m-2">React Js</p>
-                    <p className=" m-2">REST API</p>
-                    <p className=" m-2">MySQL</p>
-                </Marquee>
-                <Marquee
-                    autoFill
-                    pauseOnHover
-                    gradient={true}
-                    gradientColor="black"
-                >
-                    <p className="m-2">EVM Blockchains</p>
-                    <p className="m-2">Solidity</p>
-                    <p className="m-2">GoLang</p>
-                    <p className="m-2">Hardhat</p>
-                </Marquee>
+
+                <div className="mx-auto grid w-11/12 gap-2 border-x-2 border-x-primary/50 md:w-10/12 lg:w-8/12">
+                    <Card className="border-none bg-transparent shadow-none">
+                        <CardHeader>
+                            <CardTitle className="font-mono text-lg font-bold uppercase italic text-orange-700 lg:text-xl">
+                                1. Smart Contracts
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p>
+                                Building secure, scalable smart contracts on
+                                Ethereum, Solana, and Sui. My contracts are
+                                optimized for performance, ensuring reliability
+                                and security for decentralized applications.
+                            </p>
+                        </CardContent>
+                    </Card>
+                    <Card className="border-none bg-transparent shadow-none">
+                        <CardHeader className="font-mono text-lg font-bold uppercase italic text-orange-700 lg:text-xl">
+                            2. dApp Development
+                        </CardHeader>
+                        <CardContent>
+                            <p>
+                                Providing complete front-end and back-end
+                                solutions for decentralized applications. I
+                                deliver responsive, secure, and scalable dApps
+                                that integrate seamlessly with blockchain
+                                networks.
+                            </p>
+                        </CardContent>
+                    </Card>
+                    <Card className="border-none bg-transparent shadow-none">
+                        <CardHeader className="font-mono text-lg font-bold uppercase italic text-orange-700 lg:text-xl">
+                            3. Blockchain Consulting
+                        </CardHeader>
+                        <CardContent>
+                            <p>
+                                Helping businesses leverage blockchain with
+                                strategic consulting. I guide you through the
+                                complexities of decentralized systems, ensuring
+                                practical and effective blockchain integration.
+                            </p>
+                        </CardContent>
+                    </Card>
+                </div>
+                <div className="mt-4 text-center">
+                    <Button className=" ">
+                        <Link to="/contact">Let's Work Together</Link>
+                    </Button>
+                </div>
             </div>
-            <section className=" font-poppins grid grid-rows-7 gap-y-10">
-                <h2 className="text-2xl font-nostalgia mx-auto tracking-[0.25rem]">
-                    PREVIOUS WORKS
+            <section className="my-10">
+                <h2 className="font-nostalgia mb-8 text-center text-lg tracking-[0.25rem] md:text-xl lg:text-2xl">
+                    PROJECTS
                 </h2>
 
-                <div className=" row-span-2 bg-react bg-cover bg-center bg-no-repeat  ">
-                    <div className=" min-w-[80%] flex gap-10 items-center mx-auto p-4 md:px-10 h-full ">
-                        <h1 className=" text-2xl w-1/3">Manam Arts Academy</h1>
-                        <ul className=" font-thin space-y-2 py-4 text-sm md:text-lg w-2/3 ">
-                            <li>
-                                An art academy that teaches musical instruments,
-                                paintings and caligraphy.
-                            </li>
-                            <li>
-                                Designed and developed a website that reprsents
-                                the enviroment of the class and fun way of
-                                starting the users creative journey.
-                            </li>
+                <div className="mx-auto grid w-11/12 gap-4 md:w-10/12 md:grid-flow-row lg:w-8/12">
+                    <Card className="grid md:grid-flow-col">
+                        <CardHeader className="flex flex-col items-center justify-center space-y-3">
+                            <div className="object-fit">
+                                <img
+                                    src={Arcade}
+                                    alt=""
+                                    className="w-60 md:w-40"
+                                />
+                            </div>
+                            <CardTitle className="">
+                                Arc Relayer Bridge
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="m-auto">
+                            <ul className="space-y-2 text-center tracking-tight md:text-left">
+                                <li>
+                                    Worked as lead blockchain developer in the
+                                    relayer bridge, staking portals and other
+                                    web3 dApps.
+                                </li>
+                                <li>
+                                    Leading teams to optimize performance and
+                                    deliver user-centric solutions
+                                </li>
+                                <li>
+                                    Guiding development and planning for future
+                                    iterations.
+                                </li>
+                            </ul>
+                        </CardContent>
+                    </Card>
 
-                            <li>
-                                A react based websited that has cool transitions
-                                along with a variety of animations.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    <Card className="grid md:grid-flow-col">
+                        <CardHeader className="flex flex-col items-center justify-center space-y-3">
+                            <div className="object-fit">
+                                <img
+                                    src={Arcade}
+                                    alt=""
+                                    className="w-60 md:w-40"
+                                />
+                            </div>
+                            <CardTitle className="">
+                                Manam Arts Academy
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="m-auto">
+                            <ul className="space-y-2 text-center tracking-tight md:text-left">
+                                <li>
+                                    An art academy that teaches musical
+                                    instruments, paintings and caligraphy.
+                                </li>
+                                <li>
+                                    Designed and developed a website that
+                                    reprsents the enviroment of the class and
+                                    fun way of starting the users creative
+                                    journey.
+                                </li>
+                                <li>
+                                    A react based websited that has cool
+                                    transitions along with a variety of
+                                    animations.
+                                </li>
+                            </ul>
+                        </CardContent>
+                    </Card>
 
-                <div className=" row-span-2 bg-eth bg-cover bg-center bg-no-repeat  ">
-                    <div className="  min-w-[80%] flex gap-10 items-center mx-auto p-4 md:px-10 h-full ">
-                        <h1 className=" text-2xl w-1/3">
-                            Arcade Relayer Bridge
-                        </h1>
-                        <ul className=" font-thin space-y-2 py-4 text-sm md:text-lg w-2/3 ">
-                            <li>
-                                Acting as lead blockchain developer in the
-                                relayer bridge, staking portals and other web3
-                                dApps.
-                            </li>
-                            <li>
-                                Leading teams to optimize performance and
-                                deliver user-centric solutions
-                            </li>
-                            <li>
-                                Guiding development and planning for future
-                                iterations.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className=" row-span-2 bg-eth2 bg-cover bg-center bg-no-repeat ">
-                    <div className="  min-w-[80%] flex gap-10 items-center mx-auto p-4 md:px-10 h-full ">
-                        <h1 className=" text-2xl w-1/3">Pacific DeFi</h1>
-                        <ul className=" font-thin space-y-2  text-sm md:text-lg w-2/3 ">
-                            <li>
-                                A DEX aggregator that supplies your stake to
-                                multiple decentralized exchanges in one
-                                transaction.
-                            </li>
-                            <li>
-                                Developed smart contracts and integrated with
-                                frontend to interact with 3 different DEXs and
-                                10 supports different tokens at the inital
-                                stage.
-                            </li>
-                        </ul>
-                    </div>
+                    <Card className="grid md:grid-flow-col">
+                        <CardHeader className="flex flex-col items-center justify-center space-y-3">
+                            <div className="object-fit">
+                                <img
+                                    src={Pacific}
+                                    alt=""
+                                    className="w-60 md:w-40"
+                                />
+                            </div>
+                            <CardTitle className="">Pacific DeFi</CardTitle>
+                        </CardHeader>
+                        <CardContent className="m-auto">
+                            <ul className="space-y-2 text-center tracking-tight md:text-left">
+                                <li>
+                                    A DEX aggregator that supplies your stake to
+                                    multiple decentralized exchanges in one
+                                    transaction.
+                                </li>
+                                <li>
+                                    Developed smart contracts and integrated
+                                    with frontend to interact with 3 different
+                                    DEXs and 10 supports different tokens at the
+                                    inital stage.
+                                </li>
+                            </ul>
+                        </CardContent>
+                    </Card>
                 </div>
             </section>
         </main>
