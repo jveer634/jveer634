@@ -26,13 +26,13 @@ const Home = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="#">
+                        <Link to="/contact">
                             <Button variant="default">Get in Touch</Button>
                         </Link>
                     </li>
                 </ul>
             </section>
-            <div className="my-10">
+            <section className="my-10">
                 <h2 className="font-nostalgia mb-8 text-center text-lg tracking-[0.25rem] md:text-xl lg:text-2xl">
                     SERVICES
                 </h2>
@@ -86,7 +86,7 @@ const Home = () => {
                         <Link to="/contact">Let's Work Together</Link>
                     </Button>
                 </div>
-            </div>
+            </section>
             <section className="my-10">
                 <h2 className="font-nostalgia mb-8 text-center text-lg tracking-[0.25rem] md:text-xl lg:text-2xl">
                     PROJECTS
@@ -186,6 +186,37 @@ const Home = () => {
                             </ul>
                         </CardContent>
                     </Card>
+                </div>
+            </section>
+
+            <section className="my-10">
+                <h2 className="mb-8 text-center text-lg font-bold tracking-tighter md:text-xl lg:text-2xl">
+                    Technologies I worked
+                </h2>
+
+                <ul className="space-y-2">
+                    <li>
+                        <span className="mr-2 font-bold">Blockchains: </span>
+                        <span>Ethereum, Polygon, BSC, Sui, Solana etc </span>
+                    </li>
+
+                    <li>
+                        <span className="mr-2 font-bold">Fullstack: </span>
+                        <span>ReactJS, Django etc </span>
+                    </li>
+                    <li>
+                        <span className="mr-2 font-bold">
+                            Programming Languages:{" "}
+                        </span>
+                        <span>
+                            Solidity, Rust, Javascript / Typescript etc{" "}
+                        </span>
+                    </li>
+                </ul>
+                <div className="my-4 text-center">
+                    <Button>
+                        <Link to="/about">Explore Full Skillset</Link>
+                    </Button>
                 </div>
             </section>
         </main>
