@@ -6,22 +6,22 @@ import { Button } from "./ui/button";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <nav className="px-10 py-4 md:px-16  flex items-center justify-between  items-around ">
+        <nav className="items-around flex items-center justify-between px-10 py-4 md:px-16">
             <Link
                 to="/"
-                className="font-bold text-orange-700 tracking-tighter  text-lg md:text-2xl  p-2 border-black"
+                className="border-black p-2 text-lg font-bold tracking-tighter text-orange-700 md:text-2xl"
             >
                 <p>Jay Nalam</p>
             </Link>
 
-            <div className="relative hidden md:flex gap-4 items-center font-mono uppercase tracking-tight rounded-xl">
-                <Link to="#">About Me</Link>
+            <div className="relative hidden items-center gap-4 rounded-xl font-mono uppercase tracking-tight md:flex">
+                <Link to="/about">About Me</Link>
                 <Link to="#">Services</Link>
                 <Link to="#">Projects</Link>
                 <Link to="https://blog.jnalam.dev" target="_blank">
                     Blog
                 </Link>
-                <Link to="/contact" className="relative underline  rounded-2xl">
+                <Link to="/contact" className="relative rounded-2xl underline">
                     Connect
                 </Link>
             </div>

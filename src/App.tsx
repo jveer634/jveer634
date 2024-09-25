@@ -7,15 +7,17 @@ import Home from "./components/Home";
 
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
+import About from "./components/About";
 
 function App() {
     return (
-        <div className=" bg-sky-50 grid grid-rows-[auto_1fr_auto]">
+        <div className="grid grid-rows-[auto_1fr_auto]">
             <Navbar />
             <ToastContainer limit={2} hideProgressBar={true} />
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
         </div>
