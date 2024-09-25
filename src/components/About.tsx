@@ -1,5 +1,25 @@
 import Me from "../assets/Me.jpg";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "./ui/card";
 
+import Solidity from "../assets/icons/solidity.png";
+import Python from "../assets/icons/python.png";
+import JavaScript from "../assets/icons/javascript.png";
+import Rust from "../assets/icons/rust.png";
+import Go from "../assets/icons/golang.png";
+import Move from "../assets/icons/move.png";
+import Typescript from "../assets/icons/typescript.png";
+
+import React from "../assets/icons/reactjs.png";
+import Django from "../assets/icons/django.png";
+import MySQL from "../assets/icons/mysql.png";
+import Redis from "../assets/icons/redis.png";
+import PostgreSQL from "../assets/icons/postgres.png";
 
 const About = () => {
     return (
@@ -12,7 +32,7 @@ const About = () => {
                         Blockchain Developer & Fullstack Engineer
                     </h2>
                     <p className="py-4 text-2xl font-semibold tracking-tighter">
-                        I’m{" "}
+                        👋 Hello. I’m{" "}
                         <span className="text-3xl font-bold text-orange-700">
                             Jay
                         </span>
@@ -32,7 +52,7 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="mt-10">
+            <section className="mt-24">
                 <h3 className="text-center text-xl font-bold tracking-tighter text-orange-500 md:text-2xl lg:text-3xl">
                     My Story
                 </h3>
@@ -73,8 +93,110 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="my-10">
-                <div className="mx-auto w-10/12">Hello</div>
+            <section className="mt-24">
+                <h2 className="mb-8 text-center text-lg font-bold tracking-tighter text-orange-500 md:text-xl lg:text-2xl">
+                    Technologies I worked
+                </h2>
+
+                <div className="mx-auto grid grid-rows-2 gap-4 md:w-max md:grid-cols-2 md:grid-rows-1">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>📝 Languages</CardTitle>
+                            <CardDescription>
+                                Here are the languages I use day-to-day for the
+                                day to day activities.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <ul className="grid grid-cols-2 gap-3">
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Solidity} className="w-6" />
+                                    <span>Solidity</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Python} className="w-6" />
+                                    <span>Python</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={JavaScript} className="w-6" />
+                                    <span>JavaScript</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Typescript} className="w-6" />
+                                    <span>Typescript</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Rust} className="w-6" />
+                                    <span>Rust</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Move} className="w-6" />
+                                    <span>Move</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Go} className="w-6" />
+                                    <span>Go</span>
+                                </li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>🖥️ Fullstack Development</CardTitle>
+                            <CardDescription>
+                                Here are the technologies that I use day-to-day
+                                to deliver fullstack web apps.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <ul className="grid grid-cols-2 gap-3">
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={React} className="w-6" />
+                                    <span>ReactJS</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Django} className="w-6" />
+                                    <span>Django</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={Redis} className="w-6" />
+                                    <span>Redis</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={MySQL} className="w-6" />
+                                    <span>MySQL</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xl">
+                                    <img src={PostgreSQL} className="w-6" />
+                                    <span>PostgreSQL</span>
+                                </li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+                </div>
+            </section>
+
+            <section className="mt-24">
+                <h2 className="mb-4 text-center text-xl font-bold italic tracking-tighter lg:text-2xl">
+                    Beyond coding and Debugging
+                </h2>
+
+                <p className="mx-auto text-center tracking-tighter md:w-2/3">
+                    When I’m not deep into blockchain development, I spend my
+                    time exploring photography, watching anime, cooking up new
+                    dishes, and staying active at the gym. My love for music and
+                    dance keeps me grounded, and I find joy in discovering
+                    creativity in all its forms. These hobbies fuel my
+                    problem-solving and innovation in tech.
+                </p>
+            </section>
+
+            <section className="my-24">
+                <blockquote className="text-center text-lg font-semibold italic tracking-tighter ">
+                    <p>Do you know why do programmers prefer dark mode?</p>
+                    <p className="text-orange-700">Because the light attracts bugs.</p>
+                </blockquote>
             </section>
         </main>
     );

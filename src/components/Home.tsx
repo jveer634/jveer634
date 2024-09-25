@@ -32,7 +32,7 @@ const Home = () => {
                     </li>
                 </ul>
             </section>
-            <section className="my-10">
+            <section className="mt-24">
                 <h2 className="font-nostalgia mb-8 text-center text-lg tracking-[0.25rem] md:text-xl lg:text-2xl">
                     SERVICES
                 </h2>
@@ -87,7 +87,7 @@ const Home = () => {
                     </Button>
                 </div>
             </section>
-            <section className="my-10">
+            <section className="mt-24">
                 <h2 className="font-nostalgia mb-8 text-center text-lg tracking-[0.25rem] md:text-xl lg:text-2xl">
                     PROJECTS
                 </h2>
@@ -189,7 +189,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="my-10">
+            {/* <section className="my-10">
                 <h2 className="mb-8 text-center text-lg font-bold tracking-tighter md:text-xl lg:text-2xl">
                     Technologies I worked
                 </h2>
@@ -218,7 +218,7 @@ const Home = () => {
                         <Link to="/about">Explore Full Skillset</Link>
                     </Button>
                 </div>
-            </section>
+            </section> */}
         </main>
     );
 };
