@@ -148,11 +148,11 @@ const Services = () => {
                 </div>
             </section>
 
-            <section className="my-24">
-                <h2 className="p-5 text-center text-lg font-semibold drop-shadow-lg">
+            <section className="mx-auto my-24 md:w-4/5">
+                <h2 className="p-5 text-center text-lg font-semibold drop-shadow-lg lg:text-xl">
                     Frequently Asked Questions
                 </h2>
-                <Accordion type="single" collapsible>
+                <Accordion type="single" collapsible className="space-y-3">
                     <AccordionItem value="item-1">
                         <AccordionTrigger>
                             1. What type of projects do you specialize in ?
@@ -184,7 +184,7 @@ const Services = () => {
                         </AccordionTrigger>
                         <AccordionContent>
                             I work with a variety of tech stacks, including:
-                            <ul className="list-disc">
+                            <ol className="list-disc">
                                 <li>Blockchain: Solidity, Rust and Move.</li>
                                 <li>
                                     Full-Stack Development: React, Django,
@@ -194,7 +194,7 @@ const Services = () => {
                                     APIs: Custom API development and third-party
                                     integrations.
                                 </li>
-                            </ul>
+                            </ol>
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-4">
