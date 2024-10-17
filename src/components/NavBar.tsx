@@ -15,13 +15,26 @@ const Navbar = () => {
             </Link>
 
             <div className="relative hidden items-center gap-4 rounded-xl font-mono uppercase tracking-tight md:flex">
-                <Link to="/about">About Me</Link>
-                <Link to="/services">Services</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="https://blog.jnalam.dev" target="_blank">
+                <Link to="/about" className="hover:text-orange-900">
+                    About
+                </Link>
+                <Link to="/services" className="hover:text-orange-900">
+                    Services
+                </Link>
+                <Link to="/projects" className="hover:text-orange-900">
+                    Projects
+                </Link>
+                <Link
+                    to="https://blog.jnalam.dev"
+                    className="hover:text-orange-900"
+                    target="_blank"
+                >
                     Blog
                 </Link>
-                <Link to="/contact" className="relative rounded-2xl underline">
+                <Link
+                    to="/contact"
+                    className="relative rounded-2xl font-bold underline underline-offset-4 hover:text-orange-900"
+                >
                     Connect
                 </Link>
             </div>

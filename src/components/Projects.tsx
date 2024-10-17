@@ -17,7 +17,7 @@ const Projects = () => {
     return (
         <main className="px-10 md:px-16">
             <section className="mx-auto my-24 flex flex-col items-center justify-center gap-8 lg:w-4/5">
-                <h3 className="text-2xl font-bold tracking-tighter lg:text-4xl drop-shadow-xl text-orange-600">
+                <h3 className="text-2xl font-bold tracking-tighter text-orange-600 drop-shadow-xl lg:text-4xl">
                     PROJECTS
                 </h3>
 
@@ -31,7 +31,7 @@ const Projects = () => {
                 </p>
 
                 <div className="mx-auto mt-14 grid gap-4 md:w-4/5 lg:w-auto lg:grid-cols-3">
-                    <Card className="flex flex-col justify-between">
+                    <Card className="flex flex-col justify-between shadow-neutral-600 drop-shadow-xl">
                         <CardHeader>
                             <CardTitle className="">
                                 OasisX Marketplace
@@ -72,7 +72,7 @@ const Projects = () => {
                         </CardFooter>
                     </Card>
 
-                    <Card className="flex flex-col justify-between">
+                    <Card className="flex flex-col justify-between shadow-neutral-600 drop-shadow-xl">
                         <CardHeader>
                             <CardTitle className="">Mintable</CardTitle>
                         </CardHeader>
@@ -112,7 +112,7 @@ const Projects = () => {
                         </CardFooter>
                     </Card>
 
-                    <Card className="flex flex-col justify-between">
+                    <Card className="flex flex-col justify-between shadow-neutral-600 drop-shadow-xl">
                         <CardHeader>
                             <CardTitle className="">JDNS</CardTitle>
                         </CardHeader>
