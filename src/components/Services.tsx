@@ -19,7 +19,7 @@ const Services = () => {
         <main className="px-10 md:px-16">
             <section className="mx-auto my-24 flex flex-col items-center justify-center gap-8 lg:w-4/5">
                 <img src={Working} alt="" className="md:w-2/3" />
-                <div className="text-justify tracking-tighter first-letter:ml-10 md:ml-0 md:text-center">
+                <div className="text-center tracking-tighter md:ml-0 md:text-center">
                     I offer a range of blockchain and full-stack development
                     services, specializing in creating efficient, secure, and
                     scalable solutions. Whether you're building a DeFi protocol,
@@ -153,7 +153,7 @@ const Services = () => {
                     Frequently Asked Questions
                 </h2>
                 <Accordion type="single" collapsible className="space-y-3">
-                    <AccordionItem value="item-1">
+                    <AccordionItem value="item-1 ">
                         <AccordionTrigger>
                             1. What type of projects do you specialize in ?
                         </AccordionTrigger>

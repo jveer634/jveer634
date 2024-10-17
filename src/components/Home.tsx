@@ -87,7 +87,7 @@ const Home = () => {
                     </Button>
                 </div>
             </section>
-            <section className="mt-24">
+            <section className="my-24">
                 <h2 className="font-nostalgia mb-8 text-center text-lg tracking-[0.25rem] md:text-xl lg:text-2xl">
                     PROJECTS
                 </h2>

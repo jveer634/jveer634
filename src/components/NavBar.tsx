@@ -16,8 +16,8 @@ const Navbar = () => {
 
             <div className="relative hidden items-center gap-4 rounded-xl font-mono uppercase tracking-tight md:flex">
                 <Link to="/about">About Me</Link>
-                <Link to="#">Services</Link>
-                <Link to="#">Projects</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/projects">Projects</Link>
                 <Link to="https://blog.jnalam.dev" target="_blank">
                     Blog
                 </Link>

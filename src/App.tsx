@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
 import About from "./components/About";
 import Services from "./components/Services";
+import Projects from "./components/Projects";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/projects" element={<Projects />} />
             </Routes>
             <Footer />
         </div>
