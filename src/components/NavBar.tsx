@@ -1,28 +1,54 @@
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+
+const links = [
+	{
+		title: "About",
+		url: "/about",
+	},
+	{
+		title: "Projects",
+		url: "/projects",
+	},
+	{
+		title: "Blog",
+		url: "https://blog.jnalam.dev",
+	},
+	{
+		title: "Connect",
+		url: "/connect",
+	},
+];
 
 const Navbar = () => {
-    return (
-        <nav className="px-10 py-4 md:px-16  flex items-center justify-between  items-around ">
-            <Link
-                to="/"
-                className="font-bold tracking-tighter text-2xl  p-2 border-black"
-            >
-                <p>Jay Nalam</p>
-            </Link>
+	return (
+		<nav className="flex justify-between items-center p-10">
+			<Link
+				to="/"
+				className="font-bold text-orange-500 tracking-tighter text-2xl"
+			>
+				<h1 className="">Jay Nalam</h1>
+			</Link>
 
-            <div className="flex relative  gap-4 items-center font-mono uppercase tracking-tight rounded-xl">
-                <Link to="#">About Me</Link>
-                {/* <Link to="#">Services</Link> */}
-                <Link to="#">Projects</Link>
-                <Link to="https://blog.jnalam.dev" target="_blank">
-                    Blog
-                </Link>
-                <Link to="/contact" className="relative underline  rounded-2xl">
-                    Connect
-                </Link>
-            </div>
-        </nav>
-    );
+			<div className="hidden xl:flex gap-4 items-center font-mono uppercase tracking-tight rounded-xl">
+				{links.map((link) => {
+					return (
+						<Link
+							to={link.url}
+							key={link.url}
+							className=" ease-in transition-all duration-100  hover:border-b-2 border-b-orange-500"
+						>
+							{link.title}
+						</Link>
+					);
+				})}
+			</div>
+
+			<GiHamburgerMenu className="fill-black xl:hidden" size={18} />
+
+			{/* todo: add mobile click menu */}
+		</nav>
+	);
 };
 
 export default Navbar;
