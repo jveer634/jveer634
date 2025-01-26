@@ -7,6 +7,9 @@ import Home from "./components/home";
 
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
+import About from "./components/About";
+import Services from "./components/Services";
+import Projects from "./components/Projects";
 
 function App() {
 	return (

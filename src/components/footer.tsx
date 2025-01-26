@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <footer className="grid grid-cols-1  md:grid-cols-2 p-10 bg-black text-white md:p-16  gap-10 ">
-            <div className="space-y-2 ">
-                <h2 className="font-bold text-2xl text-orange-600">
+        <footer className="grid grid-cols-1 gap-10 bg-black p-10 text-white md:grid-cols-2 md:p-16">
+            <div className="space-y-2 text-center md:text-left">
+                <h2 className="text-2xl font-bold text-orange-600">
                     Let's talk.
                 </h2>
                 <blockquote className="text-lg">
@@ -13,34 +13,52 @@ function Footer() {
                 </blockquote>
                 <p className="italic">- Steve Jobs</p>
             </div>
-            <div className="md:place-self-center ">
-                <h3 className=" text-md font-bold text-neutral-600 uppercase text-muted my-2">
-                    Socials
-                </h3>
-                <div className="*:p-2 from-neutral-900 flex md:flex-col gap-3">
-                    <Link
-                        target="_blank"
-                        to="mailto:jveer.nalam@gmail.com"
-                        className="hover:underline"
-                    >
-                        GMail
-                    </Link>
+            <div className="bg-red flex flex-col items-center justify-around gap-6 text-center md:w-full md:flex-row md:place-self-center md:text-left">
+                <div>
+                    <h3 className="text-md my-2 font-bold uppercase text-muted text-neutral-500">
+                        Socials
+                    </h3>
+                    <div className="*:p-2 flex gap-3 md:flex-col">
+                        <Link
+                            target="_blank"
+                            to="https://www.linkedin.com/in/jveernalam/"
+                            className="hover:text-orange-200"
+                        >
+                            LinkedIn
+                        </Link>
+                        <Link
+                            target="_blank"
+                            to="https://hashnode.com/@jveer634"
+                            className="hover:text-orange-200"
+                        >
+                            Hashnode
+                        </Link>
 
-                    <Link
-                        target="_blank"
-                        to="https://www.github.com/jveer634/"
-                        className="hover:underline"
-                    >
-                        Github
-                    </Link>
+                        <Link
+                            target="_blank"
+                            to="https://www.github.com/jveer634/"
+                            className="hover:text-orange-200"
+                        >
+                            Github
+                        </Link>
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-md my-2 font-bold uppercase text-muted text-neutral-500">
+                        Links
+                    </h3>
+                    <div className="*:p-2 flex gap-3 md:flex-col">
+                        <Link to="/" className="hover:text-orange-200">
+                            Home
+                        </Link>
+                        <Link to="/projects" className="hover:text-orange-200">
+                            Projects
+                        </Link>
 
-                    <Link
-                        target="_blank"
-                        to="https://www.linkedin.com/in/jveernalam/"
-                        className="hover:underline"
-                    >
-                        LinkedIn
-                    </Link>
+                        <Link to="/services" className="hover:text-orange-200">
+                            Services
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>
