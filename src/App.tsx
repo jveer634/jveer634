@@ -3,23 +3,25 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/NavBar";
 import Contact from "./components/Contact";
-import Home from "./components/Home";
+import Home from "./components/home";
 
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
 
 function App() {
-    return (
-        <div className=" bg-sky-50 grid grid-rows-[auto_1fr_auto]">
-            <Navbar />
-            <ToastContainer limit={2} hideProgressBar={true} />
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/contact" element={<Contact />}></Route>
-            </Routes>
-            <Footer />
-        </div>
-    );
+	return (
+		<div className="  bg-sky-50 grid min-h-screen grid-rows-[auto_auto_1fr_auto]">
+			<Navbar />
+			<ToastContainer limit={2} hideProgressBar={true} />
+
+			<Routes>
+				<Route path="/" element={<Home />}></Route>
+				<Route path="/contact" element={<Contact />}></Route>
+			</Routes>
+
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
