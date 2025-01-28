@@ -33,7 +33,7 @@ const Projects = () => {
                 <div className="mx-auto mt-14 grid gap-4 md:w-4/5 lg:w-auto lg:grid-cols-3">
                     <Card className="flex flex-col justify-between shadow-neutral-600 drop-shadow-xl">
                         <CardHeader>
-                            <CardTitle className="">
+                            <CardTitle>
                                 OasisX Marketplace
                             </CardTitle>
                         </CardHeader>
@@ -47,7 +47,7 @@ const Projects = () => {
                                 the minting process for NFTs, allowing users to
                                 mint and trade digital assets seamlessly.
                             </p>
-                            <div className="">
+                            <div>
                                 <span className="font-semibold">
                                     Technologies:{" "}
                                 </span>
@@ -58,7 +58,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </CardContent>
-                        <CardFooter className="">
+                        <CardFooter>
                             <a
                                 href="https://oasisx.world/"
                                 target="_blank"
@@ -74,7 +74,7 @@ const Projects = () => {
 
                     <Card className="flex flex-col justify-between shadow-neutral-600 drop-shadow-xl">
                         <CardHeader>
-                            <CardTitle className="">Mintable</CardTitle>
+                            <CardTitle>Mintable</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
@@ -98,7 +98,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </CardContent>
-                        <CardFooter className="">
+                        <CardFooter>
                             <a
                                 href="https://mintable.com/"
                                 target="_blank"
@@ -114,7 +114,7 @@ const Projects = () => {
 
                     <Card className="flex flex-col justify-between shadow-neutral-600 drop-shadow-xl">
                         <CardHeader>
-                            <CardTitle className="">JDNS</CardTitle>
+                            <CardTitle>JDNS</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
@@ -137,7 +137,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </CardContent>
-                        <CardFooter className="">
+                        <CardFooter>
                             <a
                                 href="https://github.com/jveer634/jdns"
                                 target="_blank"

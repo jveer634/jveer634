@@ -15,7 +15,7 @@ import { Textarea } from "./ui/textarea";
 import { useRef } from "react";
 
 const Contact = () => {
-    const formRef = useRef();
+    const formRef = useRef(null);
 
     const onSubmit = async (event: any) => {
         event.preventDefault();

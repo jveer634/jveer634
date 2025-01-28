@@ -39,7 +39,7 @@ const About = () => {
                         , a blockchain developer who loves building
                         decentralized solutions.
                     </p>
-                    <p className="">
+                    <p>
                         I’ve worked extensively with EVM-based networks, smart
                         contracts, and Web3 protocols, focusing on creating
                         secure and scalable applications. My experience includes
