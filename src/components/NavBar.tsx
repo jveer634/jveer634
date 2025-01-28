@@ -22,12 +22,12 @@ const links = [
 
 const Navbar = () => {
 	return (
-		<nav className="flex justify-between items-center p-10">
+		<nav className="flex h-[10vh] justify-between items-center p-10">
 			<Link
 				to="/"
 				className="font-bold text-orange-500 tracking-tighter text-2xl"
 			>
-				<h1 className="">Jay Nalam</h1>
+				<h1>Jay Nalam</h1>
 			</Link>
 
 			<div className="hidden xl:flex gap-4 items-center font-mono uppercase tracking-tight rounded-xl">

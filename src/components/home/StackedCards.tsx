@@ -81,7 +81,7 @@ const Card = ({ title, description, bgColor, icons, titleColor }: CardType) => {
 
 	return (
 		<div
-			className="sticky top-0 flex items-center justify-center h-screen"
+			className="sticky top-0  flex items-center justify-center h-screen"
 			ref={container}
 		>
 			<div
@@ -100,7 +100,7 @@ const Card = ({ title, description, bgColor, icons, titleColor }: CardType) => {
 							const IconComponent = icon;
 							return (
 								<IconComponent
-									className="fill-black hover:scale-125 transition-all ease-in-out delay-100 opacity-90 hover:opacity-100"
+									className="fill-black hover:scale-110 transition-all ease-in-out delay-100 opacity-90 hover:opacity-100"
 									size={20}
 									key={index}
 								/>

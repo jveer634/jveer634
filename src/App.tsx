@@ -18,8 +18,11 @@ function App() {
 			<ToastContainer limit={2} hideProgressBar={true} />
 
 			<Routes>
-				<Route path="/" element={<Home />}></Route>
+				<Route path="/" element={<Home />} ></Route>
 				<Route path="/contact" element={<Contact />}></Route>
+				<Route path="/projects" element={<Projects />}></Route>
+				<Route path="/services" element={<Services />}></Route>
+				<Route path="/about" element={<About />}></Route>
 			</Routes>
 
 			<Footer />

@@ -1,6 +1,5 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import SplitType from "split-type";
 
@@ -12,7 +11,6 @@ export const Quote = () => {
 				split: "words",
 			});
 
-			gsap.registerPlugin(ScrollTrigger);
 			gsap.from(".word", {
 				opacity: 0,
 				stagger: 0.25,
@@ -23,7 +21,7 @@ export const Quote = () => {
 	);
 
 	return (
-		<section className=" x:w-1/2 xl:text-left text-center" ref={container}>
+		<section className=" x:w-1/2 p-20 xl:text-left text-center" ref={container}>
 			<p
 				className="font-bebas text-6xl xl:text-8xl text-center"
 				id="quote"
