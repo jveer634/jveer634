@@ -8,3 +8,25 @@
     font-family: "Nostalgia";
     src: url(./assets/Nostalgia.otf) format("opentype");
 }
+
+@layer base {
+    body {
+        @apply bg-[#070709] text-zinc-100 antialiased font-sans selection:bg-violet-500/30 selection:text-violet-200;
+    }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #070709;
+}
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 9px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}

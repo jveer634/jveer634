@@ -4,6 +4,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
+                sans: ["Inter", "sans-serif"],
+                display: ["Plus Jakarta Sans", "sans-serif"],
                 poppins: ["Poppins", "sans-serif"],
                 nostalgia: ["Nostalgia", "sans-serif"],
                 lora: ["Lora", "sans-serif"],
