@@ -79,7 +79,7 @@ const Home = () => {
                             <h2 className="text-lg md:text-xl font-light text-zinc-300 leading-relaxed">
                                 A <span className="font-semibold text-zinc-100">Freelance Web Developer</span> and Blockchain Developer from India. I create web platforms that elevate your business standards and expand your brand network.
                             </h2>
-                            
+
                             <div className="pt-2">
                                 <Link
                                     to="/contact"
@@ -142,7 +142,7 @@ const Home = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent z-10"></div>
                             <div className="absolute inset-0 bg-react bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" />
                         </div>
-                        
+
                         <div className="relative z-10 space-y-4">
                             <span className="inline-block px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-violet-500/10 text-violet-400 border border-violet-500/20 font-display">
                                 Web UX / Branding
@@ -172,7 +172,7 @@ const Home = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent z-10"></div>
                             <div className="absolute inset-0 bg-eth bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" />
                         </div>
-                        
+
                         <div className="relative z-10 space-y-4">
                             <span className="inline-block px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-display">
                                 Blockchain / Web3
@@ -202,7 +202,7 @@ const Home = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent z-10"></div>
                             <div className="absolute inset-0 bg-eth2 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" />
                         </div>
-                        
+
                         <div className="relative z-10 space-y-4">
                             <span className="inline-block px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20 font-display">
                                 DeFi / Smart Contracts
@@ -233,7 +233,7 @@ const Home = () => {
                 <span className="text-xs text-zinc-500 font-light">
                     © {new Date().getFullYear()} Jay Nalam. All rights reserved.
                 </span>
-                
+
                 <div className="flex gap-x-6 text-zinc-500">
                     <a href="https://www.linkedin.com/in/jveernalam/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors duration-300">
                         <BsLinkedin size={18} />
