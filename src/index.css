@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 @font-face {
     font-family: "Nostalgia";
@@ -11,7 +10,11 @@
 
 @layer base {
     body {
-        @apply bg-[#070709] text-zinc-100 antialiased font-sans selection:bg-violet-500/30 selection:text-violet-200;
+        @apply bg-[#070709] text-zinc-100 antialiased font-sans;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
     }
 }
 
