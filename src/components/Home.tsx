@@ -31,11 +31,7 @@ const Home = () => {
             "-=0.6"
         );
 
-        timeline.to(
-            ".img",
-            { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" },
-            "-=0.8"
-        );
+        timeline.to(".img", { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }, "-=0.8");
     }, []);
 
     return (
@@ -45,7 +41,9 @@ const Home = () => {
                 <div className="space-y-2 text-center px-4">
                     <h1 className="text opacity-0 font-light text-zinc-400">Thinking of</h1>
                     <h1 className="text opacity-0 text-zinc-100">leveling up your</h1>
-                    <h1 className="text opacity-0 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">business?</h1>
+                    <h1 className="text opacity-0 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
+                        business?
+                    </h1>
                 </div>
             </section>
 
@@ -71,13 +69,21 @@ const Home = () => {
                                 Available for Freelance
                             </span>
                             <h1 className="text-3xl md:text-5xl font-display font-black leading-tight tracking-tight">
-                                I am <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400">Jay Nalam</span>
+                                I am{" "}
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400">
+                                    Jay Nalam
+                                </span>
                             </h1>
                         </div>
 
                         <div className="opacity-0 translate-y-4 animate space-y-6">
                             <h2 className="text-lg md:text-xl font-light text-zinc-300 leading-relaxed">
-                                A <span className="font-semibold text-zinc-100">Freelance Web Developer</span> and Blockchain Developer from India. I create web platforms that elevate your business standards and expand your brand network.
+                                A{" "}
+                                <span className="font-semibold text-zinc-100">
+                                    Freelance Web Developer
+                                </span>{" "}
+                                and Blockchain Developer from India. I create web platforms that
+                                elevate your business standards and expand your brand network.
                             </h2>
 
                             <div className="pt-2">
@@ -101,16 +107,19 @@ const Home = () => {
                     </h2>
 
                     <div className="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,_transparent_0%,_black_10%,_black_90%,_transparent_100%)] space-y-4">
-                        <Marquee
-                            autoFill
-                            speed={45}
-                            pauseOnHover
-                            gradient={false}
-                        >
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">Django</span>
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">React Js</span>
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">REST API</span>
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">MySQL</span>
+                        <Marquee autoFill speed={45} pauseOnHover gradient={false}>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                Django
+                            </span>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                React Js
+                            </span>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                REST API
+                            </span>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                MySQL
+                            </span>
                         </Marquee>
 
                         <Marquee
@@ -120,10 +129,18 @@ const Home = () => {
                             gradient={false}
                             direction="right"
                         >
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">EVM Blockchains</span>
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">Solidity</span>
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">GoLang</span>
-                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">Hardhat</span>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                EVM Blockchains
+                            </span>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                Solidity
+                            </span>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                GoLang
+                            </span>
+                            <span className="bg-zinc-900/40 border border-zinc-800/80 text-zinc-300 hover:border-violet-500/30 hover:text-zinc-100 px-5 py-2.5 rounded-full text-sm font-medium mx-3 transition-colors duration-300 flex items-center gap-2 backdrop-blur-sm">
+                                Hardhat
+                            </span>
                         </Marquee>
                     </div>
                 </div>
@@ -151,7 +168,9 @@ const Home = () => {
                                 Manam Arts Academy
                             </h3>
                             <p className="text-sm text-zinc-400 font-light leading-relaxed">
-                                An art academy focused on painting, music, and calligraphy. Designed an interactive web presence replicating creative classroom environments.
+                                An art academy focused on painting, music, and calligraphy. Designed
+                                an interactive web presence replicating creative classroom
+                                environments.
                             </p>
                             <ul className="text-xs text-zinc-500 font-medium space-y-1.5 pt-1">
                                 <li className="flex items-center gap-2">
@@ -181,7 +200,8 @@ const Home = () => {
                                 Arcade Relayer Bridge
                             </h3>
                             <p className="text-sm text-zinc-400 font-light leading-relaxed">
-                                Acted as Lead Blockchain Developer for the bridge mechanism, portal setups, and multiple cross-chain decentralized applications.
+                                Acted as Lead Blockchain Developer for the bridge mechanism, portal
+                                setups, and multiple cross-chain decentralized applications.
                             </p>
                             <ul className="text-xs text-zinc-500 font-medium space-y-1.5 pt-1">
                                 <li className="flex items-center gap-2">
@@ -211,7 +231,8 @@ const Home = () => {
                                 Pacific DeFi
                             </h3>
                             <p className="text-sm text-zinc-400 font-light leading-relaxed">
-                                A dex aggregator distributing stakes across decentralised exchanges in single-execution transactions. Engineered solidity core.
+                                A dex aggregator distributing stakes across decentralised exchanges
+                                in single-execution transactions. Engineered solidity core.
                             </p>
                             <ul className="text-xs text-zinc-500 font-medium space-y-1.5 pt-1">
                                 <li className="flex items-center gap-2">
@@ -235,13 +256,28 @@ const Home = () => {
                 </span>
 
                 <div className="flex gap-x-6 text-zinc-500">
-                    <a href="https://www.linkedin.com/in/jveernalam/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors duration-300">
+                    <a
+                        href="https://www.linkedin.com/in/jveernalam/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-zinc-300 transition-colors duration-300"
+                    >
                         <BsLinkedin size={18} />
                     </a>
-                    <a href="https://www.github.com/jveer634/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors duration-300">
+                    <a
+                        href="https://www.github.com/jveer634/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-zinc-300 transition-colors duration-300"
+                    >
                         <BsGithub size={18} />
                     </a>
-                    <a href="https://www.instagram.com/jveer634/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors duration-300">
+                    <a
+                        href="https://www.instagram.com/jveer634/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-zinc-300 transition-colors duration-300"
+                    >
                         <BsInstagram size={18} />
                     </a>
                 </div>
