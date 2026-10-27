@@ -37,9 +37,6 @@ The site is built with a sleek dark-mode aesthetic utilizing glassmorphism, GSAP
 
 ```
 .
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Actions CI/CD deploying ./dist to GitHub Pages
 ├── Media/
 │   └── Banner.png              # Profile banner asset for README
 ├── public/
@@ -68,6 +65,7 @@ The site is built with a sleek dark-mode aesthetic utilizing glassmorphism, GSAP
 ├── tailwind.config.js          # Tailwind theme extensions (colors, fonts, backgrounds)
 ├── tsconfig.json               # TypeScript compiler configurations
 ├── tsconfig.node.json          # Node-specific TypeScript compiler options
+├── vercel.json                 # Vercel configuration for SPA client-side routing rewrites
 └── vite.config.ts              # Vite configuration with React & Tailwind plugins
 ```
 
