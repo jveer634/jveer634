@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -6,30 +7,15 @@ import {
     BsDiagram3,
     BsCpu,
     BsShieldCheck,
-    BsGithub,
-    BsLinkedin,
-    BsBook,
     BsBoxArrowUpRight,
-    BsEnvelope,
-    BsGeoAlt,
-    BsGlobe,
     BsBriefcase,
     BsMortarboard,
-    BsCopy,
-    BsCheck,
 } from "react-icons/bs";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ArchitecturalDossier = () => {
     const containerRef = useRef<HTMLElement>(null);
-    const [copied, setCopied] = useState(false);
-
-    const handleCopyEmail = () => {
-        navigator.clipboard.writeText("jveernalam@gmail.com");
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-    };
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -165,8 +151,8 @@ const ArchitecturalDossier = () => {
                     <div className="lg:col-span-5 p-6 sm:p-8 md:p-10 flex flex-col justify-between space-y-6">
                         <div>
                             {/* Availability Badge - Hard Pointed */}
-                            <a
-                                href="#contact"
+                            <Link
+                                to="/contact"
                                 className="inline-flex items-center justify-between gap-4 px-4 py-2 rounded-none bg-white/[0.04] border border-white/10 hover:border-[#ff1744]/50 transition-colors group mb-6"
                             >
                                 <div>
@@ -180,7 +166,7 @@ const ArchitecturalDossier = () => {
                                 <span className="text-[#ff1744] font-bold text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                     ↗
                                 </span>
-                            </a>
+                            </Link>
 
                             {/* Section Title */}
                             <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-wider text-white mb-3 flex items-center gap-2">
@@ -397,224 +383,171 @@ const ArchitecturalDossier = () => {
                             </p>
                         </div>
 
-                        {/* Experience Timeline Items - Hard Pointed */}
-                        <div className="space-y-4 pt-1">
-                            {/* Role 1 */}
-                            <div className="p-3.5 rounded-none bg-white/[0.02] border border-white/[0.06] hover:border-[#ff1744]/40 transition-colors space-y-1">
+                        {/* Experience Architectural Timeline: Connected Cyber Rail Design */}
+                        <div className="relative pl-6 sm:pl-7 space-y-4 pt-1 before:absolute before:left-2 sm:before:left-2.5 before:top-3 before:bottom-3 before:w-px before:bg-gradient-to-b before:from-[#ff1744] before:via-purple-500/50 before:to-zinc-800">
+                            {/* Role 1: Current Senior Role */}
+                            <div className="relative p-4 rounded-none bg-white/[0.02] border border-white/[0.06] border-l-2 border-l-[#ff1744] hover:bg-white/[0.04] transition-all space-y-2 group shadow-sm">
+                                {/* Beacon Node on the Rail */}
+                                <div className="absolute -left-[27px] sm:-left-[31px] top-4 w-3.5 h-3.5 rounded-none bg-black border border-[#ff1744] flex items-center justify-center">
+                                    <div className="w-1.5 h-1.5 rounded-none bg-[#ff1744] shadow-[0_0_8px_#ff1744] animate-pulse" />
+                                </div>
+
                                 <div className="flex items-center justify-between text-xs font-mono">
-                                    <span className="text-[#ff1744] font-bold flex items-center gap-1.5">
-                                        <span className="w-1.5 h-1.5 rounded-none bg-[#ff1744] animate-ping" />
-                                        2025 – Present
+                                    <span className="text-[#ff1744] font-bold flex items-center gap-2">
+                                        <span className="px-1.5 py-0.5 rounded-none bg-[#ff1744]/10 border border-[#ff1744]/30 text-[9px] uppercase tracking-wider">
+                                            ACTIVE ROLE
+                                        </span>
+                                        <span>2025 – PRESENT</span>
                                     </span>
-                                    <span className="text-zinc-500 text-[10px]">Bengaluru, IN</span>
+                                    <span className="text-zinc-500 text-[10px] uppercase font-mono tracking-wider">
+                                        BENGALURU, IN
+                                    </span>
                                 </div>
-                                <div className="text-sm font-syne font-bold text-white flex items-center gap-2">
-                                    <BsBriefcase size={12} className="text-[#ff1744]" />
-                                    <span>Senior Blockchain Engineer</span>
+
+                                <div>
+                                    <div className="text-sm font-syne font-bold text-white flex items-center gap-2 group-hover:text-[#ff1744] transition-colors">
+                                        <BsBriefcase size={13} className="text-[#ff1744]" />
+                                        <span>Senior Blockchain Engineer</span>
+                                    </div>
+                                    <div className="text-xs text-zinc-400 font-mono mt-0.5">
+                                        Blockstack Pvt Ltd • DexPop Centralized Exchange
+                                    </div>
                                 </div>
-                                <div className="text-xs text-zinc-400 font-mono">
-                                    Blockstack Pvt Ltd • DexPop Centralized Exchange
-                                </div>
+
                                 <p className="text-[11px] text-zinc-400 font-light leading-relaxed pt-0.5">
                                     Leading Go exchange microservices, Kafka KRaft log replication,
                                     and Rust matching engine integration.
                                 </p>
                             </div>
 
-                            {/* Role 2 */}
-                            <div className="p-3.5 rounded-none bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/40 transition-colors space-y-1">
+                            {/* Role 2: Previous Blockchain Developer */}
+                            <div className="relative p-4 rounded-none bg-white/[0.02] border border-white/[0.06] border-l-2 border-l-purple-500/80 hover:bg-white/[0.04] transition-all space-y-2 group shadow-sm">
+                                {/* Milestone Node on the Rail */}
+                                <div className="absolute -left-[27px] sm:-left-[31px] top-4 w-3.5 h-3.5 rounded-none bg-black border border-purple-500/60 flex items-center justify-center">
+                                    <div className="w-1.5 h-1.5 rounded-none bg-purple-400" />
+                                </div>
+
                                 <div className="flex items-center justify-between text-xs font-mono">
-                                    <span className="text-purple-400 font-bold">2024 – 2025</span>
-                                    <span className="text-zinc-500 text-[10px]">Kanpur, IN</span>
+                                    <span className="text-purple-400 font-bold flex items-center gap-2">
+                                        <span className="px-1.5 py-0.5 rounded-none bg-purple-500/10 border border-purple-500/30 text-[9px] uppercase tracking-wider">
+                                            CORE DEFI
+                                        </span>
+                                        <span>2024 – 2025</span>
+                                    </span>
+                                    <span className="text-zinc-500 text-[10px] uppercase font-mono tracking-wider">
+                                        KANPUR, IN
+                                    </span>
                                 </div>
-                                <div className="text-sm font-syne font-bold text-white flex items-center gap-2">
-                                    <BsBriefcase size={12} className="text-purple-400" />
-                                    <span>Blockchain Developer</span>
+
+                                <div>
+                                    <div className="text-sm font-syne font-bold text-white flex items-center gap-2 group-hover:text-purple-400 transition-colors">
+                                        <BsBriefcase size={13} className="text-purple-400" />
+                                        <span>Blockchain Developer</span>
+                                    </div>
+                                    <div className="text-xs text-zinc-400 font-mono mt-0.5">
+                                        ITH Technologies • TDMM DEX Aggregator
+                                    </div>
                                 </div>
-                                <div className="text-xs text-zinc-400 font-mono">
-                                    ITH Technologies • TDMM DEX Aggregator
-                                </div>
+
                                 <p className="text-[11px] text-zinc-400 font-light leading-relaxed pt-0.5">
                                     Engineered cross-chain routing across Ethereum, Solana, and Sui
                                     Move with audited smart contracts.
                                 </p>
                             </div>
 
-                            {/* Degree */}
-                            <div className="p-3.5 rounded-none bg-white/[0.02] border border-white/[0.06] hover:border-zinc-700 transition-colors space-y-1">
+                            {/* Degree: Computer Science & Engineering */}
+                            <div className="relative p-4 rounded-none bg-white/[0.02] border border-white/[0.06] border-l-2 border-l-zinc-600 hover:bg-white/[0.04] transition-all space-y-2 group shadow-sm">
+                                {/* Academic Node on the Rail */}
+                                <div className="absolute -left-[27px] sm:-left-[31px] top-4 w-3.5 h-3.5 rounded-none bg-black border border-white/20 flex items-center justify-center">
+                                    <div className="w-1.5 h-1.5 rounded-none bg-zinc-400" />
+                                </div>
+
                                 <div className="flex items-center justify-between text-xs font-mono">
-                                    <span className="text-zinc-400">Graduated 2021</span>
-                                    <span className="text-zinc-500 text-[10px]">
-                                        Amalapuram, IN
+                                    <span className="text-zinc-400 font-bold flex items-center gap-2">
+                                        <span className="px-1.5 py-0.5 rounded-none bg-white/[0.05] border border-white/10 text-[9px] uppercase tracking-wider">
+                                            GRADUATED 2021
+                                        </span>
+                                    </span>
+                                    <span className="text-zinc-500 text-[10px] uppercase font-mono tracking-wider">
+                                        AMALAPURAM, IN
                                     </span>
                                 </div>
-                                <div className="text-sm font-syne font-bold text-white flex items-center gap-2">
-                                    <BsMortarboard size={13} className="text-zinc-400" />
-                                    <span>B.Tech in Computer Science & Engineering</span>
-                                </div>
-                                <div className="text-xs text-zinc-500 font-mono">
-                                    BVC Engineering College
+
+                                <div>
+                                    <div className="text-sm font-syne font-bold text-white flex items-center gap-2 group-hover:text-zinc-200 transition-colors">
+                                        <BsMortarboard size={14} className="text-zinc-400" />
+                                        <span>B.Tech in Computer Science & Engineering</span>
+                                    </div>
+                                    <div className="text-xs text-zinc-400 font-mono mt-0.5">
+                                        BVC Engineering College • Affiliated to JNTU Kakinada
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Right: Let's Work Together & Production Toolchain (Cols 6-12) */}
-                    <div
-                        id="contact"
-                        className="lg:col-span-7 p-6 sm:p-8 md:p-10 lg:border-l lg:border-white/[0.08] flex flex-col justify-start space-y-6 scroll-mt-24"
-                    >
-                        <div>
-                            <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-wider text-white mb-2 flex items-center gap-2">
-                                <span>LET'S WORK TOGETHER</span>
+                    {/* Right: Production Toolchain & Architectural Call to Action (Cols 6-12) */}
+                    <div className="lg:col-span-7 p-6 sm:p-8 md:p-10 lg:border-l lg:border-white/[0.08] flex flex-col justify-between space-y-6">
+                        <div className="space-y-3">
+                            <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-wider text-white flex items-center gap-2">
+                                <span>PRODUCTION TOOLCHAIN & STACK</span>
                                 <span className="text-[#ff1744]">—</span>
                             </h3>
-                            <p className="text-xs text-zinc-400 font-light">
+                            <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
                                 Available for Senior Backend, Distributed Systems, and Blockchain
-                                engineering roles worldwide.
+                                engineering roles{" "}
+                                <span className="text-[#ff1744] font-mono font-medium">
+                                    (Bengaluru or Remote only)
+                                </span>
+                                .
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                            {/* Direct Communication Channels */}
-                            <div className="space-y-3.5">
-                                <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-bold">
-                                    DIRECT COORDINATES
-                                </div>
-                                <div className="space-y-2.5 text-xs font-mono text-zinc-300">
-                                    <a
-                                        href="mailto:jveernalam@gmail.com"
-                                        className="flex items-center gap-2 hover:text-[#ff1744] transition-colors p-2.5 rounded-none bg-white/[0.02] border border-white/[0.06]"
-                                    >
-                                        <BsEnvelope size={14} className="text-[#ff1744] shrink-0" />
-                                        <span className="truncate">jveernalam@gmail.com</span>
-                                    </a>
-                                    <div className="flex items-center gap-2 text-zinc-400 p-2.5 rounded-none bg-white/[0.02] border border-white/[0.06]">
-                                        <BsGeoAlt size={14} className="text-[#8b5cf6] shrink-0" />
-                                        <span className="truncate">Bengaluru, India</span>
-                                    </div>
-                                    <a
-                                        href="https://blog.jnalam.dev"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 hover:text-white transition-colors p-2.5 rounded-none bg-white/[0.02] border border-white/[0.06]"
-                                    >
-                                        <BsGlobe size={14} className="text-cyan-400 shrink-0" />
-                                        <span className="truncate">https://blog.jnalam.dev</span>
-                                    </a>
-                                </div>
-
-                                {/* Interactive Copy Email Button */}
-                                <button
-                                    onClick={handleCopyEmail}
-                                    className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-none bg-white/[0.04] hover:bg-white/10 border border-white/10 hover:border-white/30 text-xs font-mono uppercase tracking-wider text-zinc-300 hover:text-white transition-all cursor-pointer"
-                                >
-                                    {copied ? (
-                                        <>
-                                            <BsCheck size={16} className="text-emerald-400" />
-                                            <span className="text-emerald-400 font-bold">
-                                                COPIED TO CLIPBOARD!
-                                            </span>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <BsCopy size={12} className="text-zinc-400" />
-                                            <span>COPY EMAIL ADDRESS</span>
-                                        </>
-                                    )}
-                                </button>
+                        {/* Production Toolchain Arsenal */}
+                        <div className="space-y-4">
+                            <div className="text-[10px] font-mono uppercase tracking-widest text-[#ff1744] font-bold flex items-center justify-between">
+                                <span>VERIFIED PRODUCTION STACK</span>
+                                <span className="text-zinc-500">L4 ARCHITECTURE</span>
                             </div>
 
-                            {/* Production Arsenal & Action Trigger */}
-                            <div className="p-4 rounded-none bg-white/[0.02] border border-white/[0.06] space-y-4">
-                                <div className="text-[10px] font-mono uppercase tracking-widest text-[#ff1744] font-bold flex items-center justify-between">
-                                    <span>PRODUCTION TOOLCHAIN</span>
-                                    <span className="text-zinc-500">L4 ARCHITECTURE</span>
-                                </div>
-
-                                <div className="flex flex-wrap gap-1.5">
-                                    {[
-                                        "Rust",
-                                        "Go",
-                                        "Kafka (KRaft)",
-                                        "gRPC / mTLS",
-                                        "Zero-Alloc SBE",
-                                        "Solidity",
-                                        "Solana (SVM)",
-                                        "Sui Move",
-                                        "TimescaleDB",
-                                        "Redis",
-                                    ].map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="text-[10px] font-mono px-2 py-1 rounded-none bg-white/[0.04] border border-white/[0.08] text-zinc-300 hover:border-[#ff1744]/50 transition-colors"
-                                        >
-                                            {tech}
+                            <div className="flex flex-wrap gap-2">
+                                {[
+                                    { name: "Rust", category: "Low-Latency" },
+                                    { name: "Go", category: "Microservices" },
+                                    { name: "Kafka (KRaft)", category: "Distributed WAL" },
+                                    { name: "gRPC / mTLS", category: "RPC IPC" },
+                                    { name: "Zero-Alloc SBE", category: "Binary Serialization" },
+                                    { name: "Solidity", category: "Smart Contracts" },
+                                    { name: "Solana (SVM)", category: "High TPS" },
+                                    { name: "Sui Move", category: "Object Model" },
+                                    { name: "TimescaleDB", category: "Time-Series" },
+                                    { name: "Redis", category: "In-Memory Cache" },
+                                ].map((tech) => (
+                                    <div
+                                        key={tech.name}
+                                        className="px-3 py-1.5 rounded-none bg-white/[0.03] border border-white/[0.08] hover:border-[#ff1744]/50 hover:bg-white/[0.06] transition-all flex items-center gap-2"
+                                    >
+                                        <span className="text-xs font-mono text-zinc-200">
+                                            {tech.name}
                                         </span>
-                                    ))}
-                                </div>
-
-                                <a
-                                    href="mailto:jveernalam@gmail.com"
-                                    className="w-full py-2.5 px-4 rounded-none bg-[#ff1744] hover:bg-white text-black font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(255,23,68,0.3)] mt-2"
-                                >
-                                    <span>DISCUSS SYSTEM ARCHITECTURE</span>
-                                    <span>↗</span>
-                                </a>
+                                        <span className="text-[9px] font-mono text-zinc-500 hidden sm:inline">
+                                            // {tech.category}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* =========================================================================
-                    ROW 4: SUB-FOOTER INSIDE CONTAINER - HARD POINTED
-                    ========================================================================= */}
-                <div className="border-t border-white/[0.08] px-6 sm:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-400 relative z-10">
-                    <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-3 text-zinc-400">
-                            <a
-                                href="https://www.linkedin.com/in/jveernalam/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-8 h-8 rounded-none bg-white/[0.04] border border-white/10 hover:border-[#ff1744] hover:text-[#ff1744] flex items-center justify-center transition-colors"
-                                title="LinkedIn"
+                        {/* Direct Action Trigger */}
+                        <div className="pt-2">
+                            <Link
+                                to="/contact"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 py-3 px-6 rounded-none bg-[#ff1744] hover:bg-white text-black font-mono font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(255,23,68,0.3)] cursor-pointer"
                             >
-                                <BsLinkedin size={14} />
-                            </a>
-                            <a
-                                href="https://www.github.com/jveer634/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-8 h-8 rounded-none bg-white/[0.04] border border-white/10 hover:border-[#8b5cf6] hover:text-[#8b5cf6] flex items-center justify-center transition-colors"
-                                title="GitHub"
-                            >
-                                <BsGithub size={14} />
-                            </a>
-                            <a
-                                href="https://blog.jnalam.dev"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-8 h-8 rounded-none bg-white/[0.04] border border-white/10 hover:border-white hover:text-white flex items-center justify-center transition-colors"
-                                title="Web3 Engineering Blog"
-                            >
-                                <BsBook size={14} />
-                            </a>
+                                <span>DISCUSS SYSTEM ARCHITECTURE</span>
+                                <span className="text-sm font-bold">↗</span>
+                            </Link>
                         </div>
-
-                        <a
-                            href="https://github.com/jveer634"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-none bg-white/[0.04] border border-white/10 hover:border-[#ff1744] text-zinc-300 hover:text-white transition-colors"
-                        >
-                            <span>VISIT GITHUB</span>
-                            <span className="text-[#ff1744]">↗</span>
-                        </a>
-                    </div>
-
-                    <div className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest flex items-center gap-2">
-                        <span>THANK YOU FOR VISITING!</span>
-                        <span className="text-[#ff1744]">✦</span>
                     </div>
                 </div>
             </div>
