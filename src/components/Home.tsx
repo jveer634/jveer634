@@ -3,10 +3,7 @@ import gsap from "gsap";
 import { BsGithub, BsLinkedin, BsBook } from "react-icons/bs";
 
 import Hero from "./Hero";
-import CaseStudies from "./CaseStudies";
-import ExperienceTimeline from "./ExperienceTimeline";
-import Publications from "./Publications";
-import Contact from "./Contact";
+import ArchitecturalDossier from "./ArchitecturalDossier";
 
 const Home = () => {
     useEffect(() => {
@@ -55,23 +52,18 @@ const Home = () => {
             {/* Hero Section */}
             <Hero />
 
-            {/* System Design Case Studies */}
-            <CaseStudies />
-
-            {/* Professional Experience Track Record */}
-            <ExperienceTimeline />
-
-            {/* Technical Publications & Thought Leadership */}
-            <Publications />
-
-            {/* Let's Work Together Contact Section (Exact from Reference) */}
-            <Contact />
+            {/* Framed Architectural Dossier: Matching Hero Width Exactly */}
+            <ArchitecturalDossier />
 
             {/* Footer */}
             <footer className="border-t border-white/[0.08] max-w-7xl mx-auto py-12 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400 font-mono">
-                <div>
-                    © {new Date().getFullYear()} Jay Nalam. Architected for sub-microsecond
-                    execution.
+                <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+                    <span>© {new Date().getFullYear()} Jay Nalam.</span>
+                    <span className="hidden sm:inline text-zinc-600">•</span>
+                    <span className="text-zinc-400 italic">
+                        "Power is not will. It is the phenomenon of physically making things
+                        happen." — Madara Uchiha
+                    </span>
                 </div>
 
                 <div className="flex items-center gap-6 text-zinc-400">

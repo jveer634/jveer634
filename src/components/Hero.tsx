@@ -1,33 +1,12 @@
 import MadaraCutout from "../assets/madara_cutout.png";
-import Logo from "../assets/logo.svg";
 import { BsArrowRight } from "react-icons/bs";
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen bg-[#070709] text-white flex flex-col justify-between pt-24 pb-12 px-6 sm:px-10 md:px-16 overflow-hidden">
-            {/* Top Micro-Header Bar (Exact from reference) */}
-            <div className="flex items-center justify-between border-b border-white/[0.08] pb-4 mb-6 text-[11px] font-mono uppercase tracking-widest text-zinc-400">
-                <div
-                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="flex items-center gap-3 cursor-pointer group"
-                    title="Back to Top"
-                >
-                    <img
-                        src={Logo}
-                        alt="Logo"
-                        className="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#ff1744] transition-colors"
-                    />
-                    <span className="text-zinc-200 font-bold group-hover:text-white transition-colors">
-                        SENIOR SYSTEMS & BLOCKCHAIN ENGINEER
-                    </span>
-                </div>
-                <div className="flex items-center gap-2 text-[#ff1744] font-semibold">
-                    <span className="w-2 h-2 rounded-full bg-[#ff1744] animate-ping" />
-                    <span>AVAILABLE FOR FULL-TIME ROLES</span>
-                    <span className="text-zinc-600">✦</span>
-                </div>
-            </div>
-
+        <section
+            id="overview"
+            className="relative min-h-screen bg-[#070709] text-white flex flex-col justify-between pt-24 pb-12 px-4 sm:px-10 md:px-16 overflow-hidden scroll-mt-20"
+        >
             {/* Main Hero Container */}
             <div className="relative flex-1 flex flex-col justify-center items-center my-auto w-full">
                 {/* 1. Giant Background Text: "PORTFOLIO" (Exact from Reference) */}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
-import { BsList, BsX, BsSearch } from "react-icons/bs";
+import { BsList, BsX } from "react-icons/bs";
 
 const Nav = () => {
     const location = useLocation();
@@ -9,31 +9,45 @@ const Nav = () => {
     const isHome = location.pathname === "/";
 
     const navLinks = [
-        { name: "Explore", href: isHome ? "#systems" : "/#systems" },
-        { name: "Technology", href: isHome ? "#case-studies" : "/#case-studies" },
+        { name: "Explore", href: isHome ? "#overview" : "/#overview" },
+        { name: "Technology", href: isHome ? "#technology" : "/#technology" },
         { name: "Experience", href: isHome ? "#experience" : "/#experience" },
         { name: "Journal", href: "https://blog.jnalam.dev", external: true },
-        { name: "Contact", href: "/contact", isRoute: true },
+        { name: "Contact", href: isHome ? "#contact" : "/#contact" },
     ];
 
     const handleLogoClick = (e: React.MouseEvent) => {
+        setMobileMenuOpen(false);
         if (location.pathname === "/") {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     };
 
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        setMobileMenuOpen(false);
+        if (href.startsWith("#")) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const el = document.getElementById(targetId);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+                window.history.pushState(null, "", href);
+            }
+        }
+    };
+
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
-            <div className="w-full px-6 sm:px-10 md:px-16 py-3.5 flex justify-between items-center">
-                {/* Left: Cyberpunk Menu Trigger & Brand Identity with Logo */}
+            <div className="w-full px-4 sm:px-10 md:px-16 py-3.5 flex justify-between items-center">
                 <div className="flex items-center gap-4">
                     <button
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="text-zinc-400 hover:text-white transition-colors p-1"
-                        aria-label="Menu"
+                        onClick={() => setMobileMenuOpen((prev) => !prev)}
+                        className="lg:hidden text-zinc-300 hover:text-white transition-colors p-2 rounded-none bg-white/[0.04] border border-white/10 cursor-pointer"
+                        aria-label="Toggle Navigation Menu"
+                        aria-expanded={mobileMenuOpen}
                     >
-                        {mobileMenuOpen ? <BsX size={22} /> : <BsList size={22} />}
+                        {mobileMenuOpen ? <BsX size={20} /> : <BsList size={20} />}
                     </button>
 
                     <Link
@@ -54,8 +68,8 @@ const Nav = () => {
                     </Link>
                 </div>
 
-                {/* Right: Clean Cyberpunk Navigation Links (Matching HUMAN NEXT) */}
-                <nav className="hidden md:flex items-center gap-8 text-[11px] font-mono tracking-[0.25em] uppercase text-zinc-400">
+                {/* Right: Clean Navigation Links for Large Screens */}
+                <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[11px] font-mono tracking-[0.25em] uppercase text-zinc-400">
                     {navLinks.map((link) => {
                         if (link.external) {
                             return (
@@ -70,46 +84,23 @@ const Nav = () => {
                                 </a>
                             );
                         }
-                        if (link.isRoute) {
-                            return (
-                                <Link
-                                    key={link.name}
-                                    to={link.href}
-                                    className={`hover:text-white transition-colors duration-200 ${
-                                        location.pathname === "/contact"
-                                            ? "text-[#ff1744] font-bold"
-                                            : ""
-                                    }`}
-                                >
-                                    {link.name}
-                                </Link>
-                            );
-                        }
                         return (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="hover:text-white transition-colors duration-200"
+                                onClick={(e) => handleNavClick(e, link.href)}
+                                className="hover:text-white transition-colors duration-200 cursor-pointer"
                             >
                                 {link.name}
                             </a>
                         );
                     })}
-
-                    {/* Search Icon (Exact from HUMAN NEXT header) */}
-                    <a
-                        href="#systems"
-                        className="text-zinc-400 hover:text-white transition-colors ml-2"
-                        title="Search Systems"
-                    >
-                        <BsSearch size={14} />
-                    </a>
                 </nav>
             </div>
 
             {/* Mobile Dropdown */}
             {mobileMenuOpen && (
-                <div className="md:hidden border-b border-white/10 bg-black/95 px-8 py-5 space-y-4 font-mono text-xs uppercase tracking-widest">
+                <div className="lg:hidden border-t border-white/10 bg-black/98 px-6 sm:px-10 py-5 space-y-4 font-mono text-xs uppercase tracking-widest backdrop-blur-2xl">
                     {navLinks.map((link) => {
                         if (link.external) {
                             return (
@@ -119,30 +110,18 @@ const Nav = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="block text-zinc-300 hover:text-[#ff1744] py-1"
+                                    className="block text-zinc-300 hover:text-[#ff1744] py-1.5"
                                 >
                                     {link.name} ↗
                                 </a>
-                            );
-                        }
-                        if (link.isRoute) {
-                            return (
-                                <Link
-                                    key={link.name}
-                                    to={link.href}
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="block text-zinc-300 hover:text-[#ff1744] py-1"
-                                >
-                                    {link.name}
-                                </Link>
                             );
                         }
                         return (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="block text-zinc-300 hover:text-[#ff1744] py-1"
+                                onClick={(e) => handleNavClick(e, link.href)}
+                                className="block text-zinc-300 hover:text-[#ff1744] py-1.5 cursor-pointer"
                             >
                                 {link.name}
                             </a>
