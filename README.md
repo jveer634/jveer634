@@ -8,10 +8,10 @@ Here are some ideas to get you started:
 
 <!-- - The most stupid error I made in programming this year is... Tried to run `npm start` without installing dependencies -->
 
--   🔭 I’m currently working on EVM dapps.. (the wonderous world of Solidity Smart Contracts)
--   🌱 I’m ethusiastic on Decentralized Finance (DeFi) protocols.
--   👯 I’m looking to collaborate on Smart Contracts (Solidity), Django, and Python
--   📫 Lets get connected on: &nbsp; [Email](mailto:jveer.nalam@gmail.com) &nbsp; [Linkedin](https://www.linkedin.com/in/jveernalam)
+- 🔭 I’m currently working on EVM dapps.. (the wonderous world of Solidity Smart Contracts)
+- 🌱 I’m ethusiastic on Decentralized Finance (DeFi) protocols.
+- 👯 I’m looking to collaborate on Smart Contracts (Solidity), Django, and Python
+- 📫 Lets get connected on: &nbsp; [Email](mailto:jveer.nalam@gmail.com) &nbsp; [Linkedin](https://www.linkedin.com/in/jveernalam)
 
 <!--
 ![github stats](https://github-readme-stats.vercel.app/api?username=jveer634&show_icons=true)

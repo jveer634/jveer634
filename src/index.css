@@ -1,17 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 @font-face {
     font-family: "Nostalgia";
     src: url(./assets/Nostalgia.otf) format("opentype");
 }
 
+:root {
+    /* =========================================================================
+       ACTIVE THEME: Madara — Void Black, Visual Paralyse Red & Susanoo Purple
+       ========================================================================= */
+    --color-canvas: #040406;
+    --color-surface: #0a0a0f;
+    --color-surface-elevated: #111118;
+    --color-card: rgba(14, 13, 20, 0.75);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 23, 68, 0.4);
+
+    --color-paralyse-red: #ff1744;
+    --color-susanoo-purple: #8b5cf6;
+    --color-rinnegan-silver: #94a3b8;
+
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    --color-text-tertiary: #64748b;
+}
+
 @layer base {
+    html {
+        scroll-padding-top: 5rem;
+    }
     body {
-        @apply bg-[#070709] text-zinc-100 antialiased font-sans selection:bg-violet-500/30 selection:text-violet-200;
+        @apply bg-[#040406] text-zinc-100 antialiased font-sans selection:bg-[#ff1744]/25 selection:text-[#ff1744];
     }
 }
 
@@ -29,4 +51,89 @@
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #3f3f46;
+}
+
+/* GPU-accelerated Infinite Marquee */
+@keyframes marquee-scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.animate-marquee-left {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll-right 40s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+    animation-play-state: paused;
+}
+
+/* 3D Bento & Floating Badge Micro-Animations */
+@keyframes float-subtle {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(1.5deg);
+    }
+}
+
+@keyframes float-subtle-reverse {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(7px) rotate(-1.5deg);
+    }
+}
+
+@keyframes pulse-glow {
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: scale(1.08);
+    }
+}
+
+.animate-float {
+    animation: float-subtle 4.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+    animation: float-subtle-reverse 5.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 3.5s ease-in-out infinite;
+}
+
+.perspective-1000 {
+    perspective: 1000px;
 }
