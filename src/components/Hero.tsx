@@ -1,7 +1,13 @@
 import MadaraCutout from "../assets/madara_cutout.png";
 import { BsArrowRight } from "react-icons/bs";
+import { smoothScrollTo } from "../utils/smoothScroll";
 
 const Hero = () => {
+    const handleScrollClick = (e: React.MouseEvent, target: string) => {
+        e.preventDefault();
+        smoothScrollTo(target, 1.3);
+        window.history.pushState(null, "", target);
+    };
     return (
         <section
             id="overview"
@@ -49,7 +55,8 @@ const Hero = () => {
                         <div className="pt-2">
                             <a
                                 href="#case-studies"
-                                className="inline-flex items-center gap-3 px-6 py-2.5 rounded-lg bg-[#ff1744] text-black font-mono font-bold text-xs tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-[0_0_25px_rgba(255,23,68,0.5)]"
+                                onClick={(e) => handleScrollClick(e, "#case-studies")}
+                                className="inline-flex items-center gap-3 px-6 py-2.5 rounded-lg bg-[#ff1744] text-black font-mono font-bold text-xs tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-[0_0_25px_rgba(255,23,68,0.5)] cursor-pointer"
                             >
                                 <span>VIEW PROJECTS</span>
                                 <BsArrowRight size={14} />
@@ -57,18 +64,18 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    {/* Center Column (Span 6): 100% Dead-Center Aligned with Letter 'F' in PORTFOLIO */}
-                    <div className="lg:col-span-6 flex items-center justify-center relative z-10 my-6 lg:my-0">
-                        <div className="relative w-full max-w-[460px] sm:max-w-[560px] md:max-w-[650px] lg:max-w-[740px] aspect-square flex items-center justify-center mx-auto">
+                    {/* Center Column (Span 6): Perfectly Centered Cutout with Hair and Horns fully visible below navbar */}
+                    <div className="lg:col-span-6 flex items-center justify-center relative z-10 my-4 lg:my-0">
+                        <div className="relative w-full max-w-[420px] sm:max-w-[500px] md:max-w-[580px] lg:max-w-[660px] aspect-square flex items-center justify-center mx-auto">
                             {/* Ambient Susanoo Glow Behind Cutout */}
                             <div className="absolute inset-4 rounded-full bg-[#8b5cf6]/35 blur-3xl opacity-85 pointer-events-none" />
                             <div className="absolute inset-10 rounded-full bg-[#ff1744]/25 blur-2xl opacity-75 pointer-events-none" />
 
-                            {/* Transparent Cutout PNG of Madara - Dead Centered */}
+                            {/* Transparent Cutout PNG of Madara - Fully cleared below navbar */}
                             <img
                                 src={MadaraCutout}
                                 alt="Madara Uchiha with Susanoo"
-                                className="w-full h-full object-contain relative z-10 filter contrast-115 drop-shadow-[0_15px_45px_rgba(0,0,0,0.95)] pointer-events-none transform scale-110 sm:scale-120 md:scale-130 lg:scale-135 origin-bottom"
+                                className="w-full h-full object-contain relative z-10 filter contrast-115 drop-shadow-[0_15px_45px_rgba(0,0,0,0.95)] pointer-events-none transform scale-110 sm:scale-110 md:scale-130 lg:scale-125 origin-bottom"
                             />
                         </div>
                     </div>
@@ -81,8 +88,8 @@ const Hero = () => {
                                 <span>✦ REALITY OVER ILLUSION</span>
                             </div>
                             <p className="text-[11px] text-zinc-400 font-light leading-snug">
-                                "Power is not will. It is the phenomenon of physically making things
-                                happen."
+                                "Wake up to reality. Wherever there is light in this world, there
+                                are also shadows to be found."
                             </p>
                         </div>
 
@@ -128,7 +135,8 @@ const Hero = () => {
                 </div>
                 <a
                     href="#case-studies"
-                    className="hover:text-white transition-colors flex items-center gap-1 text-zinc-400"
+                    onClick={(e) => handleScrollClick(e, "#case-studies")}
+                    className="hover:text-white transition-colors flex items-center gap-1 text-zinc-400 cursor-pointer"
                 >
                     <span>SCROLL TO EXPLORE</span>
                     <BsArrowRight size={12} />
