@@ -1,45 +1,155 @@
+import { useState } from "react";
 import Logo from "../assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
+import { BsList, BsX, BsSearch } from "react-icons/bs";
 
 const Nav = () => {
     const location = useLocation();
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const isHome = location.pathname === "/";
+
+    const navLinks = [
+        { name: "Explore", href: isHome ? "#systems" : "/#systems" },
+        { name: "Technology", href: isHome ? "#case-studies" : "/#case-studies" },
+        { name: "Experience", href: isHome ? "#experience" : "/#experience" },
+        { name: "Journal", href: "https://blog.jnalam.dev", external: true },
+        { name: "Contact", href: "/contact", isRoute: true },
+    ];
+
+    const handleLogoClick = (e: React.MouseEvent) => {
+        if (location.pathname === "/") {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    };
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-[#070709]/70 backdrop-blur-md border-b border-zinc-900/60">
-            <div className="max-w-6xl mx-auto px-6 py-4 md:px-12 flex justify-between items-center">
-                <Link to="/" className="flex items-center gap-3 group">
-                    <img
-                        src={Logo}
-                        className="rounded-full h-8 w-8 md:h-10 md:w-10 border border-zinc-800 group-hover:border-violet-500/40 transition-colors duration-300"
-                        alt="Logo"
-                    />
-                    <span className="text-zinc-100 font-display font-bold tracking-tight text-sm md:text-base">
-                        Jay Nalam
-                    </span>
-                </Link>
-
-                <nav className="flex items-center gap-6 md:gap-8">
-                    <a
-                        href="https://blog.jnalam.dev"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-zinc-400 hover:text-zinc-100 text-sm font-medium transition-colors duration-300"
+        <header className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+            <div className="w-full px-6 sm:px-10 md:px-16 py-3.5 flex justify-between items-center">
+                {/* Left: Cyberpunk Menu Trigger & Brand Identity with Logo */}
+                <div className="flex items-center gap-4">
+                    <button
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        className="text-zinc-400 hover:text-white transition-colors p-1"
+                        aria-label="Menu"
                     >
-                        Blog
-                    </a>
+                        {mobileMenuOpen ? <BsX size={22} /> : <BsList size={22} />}
+                    </button>
 
                     <Link
-                        to="/contact"
-                        className={`text-sm font-semibold px-4 py-2.5 rounded-xl tracking-wide transition-all duration-300 ${
-                            location.pathname === "/contact"
-                                ? "bg-violet-600 text-white shadow-lg shadow-violet-600/10 hover:bg-violet-500"
-                                : "bg-zinc-100 text-zinc-950 hover:bg-white hover:shadow-lg hover:shadow-white/5"
-                        }`}
+                        to="/"
+                        onClick={handleLogoClick}
+                        className="flex items-center gap-3 group cursor-pointer"
+                        title="Back to Top"
                     >
-                        Contact
+                        <img
+                            src={Logo}
+                            alt="Jay Nalam Logo"
+                            className="w-8 h-8 rounded-full border border-white/20 group-hover:border-[#ff1744]/70 group-hover:shadow-[0_0_15px_rgba(255,23,68,0.5)] transition-all duration-300"
+                        />
+                        <span className="text-zinc-100 font-syne font-black text-sm tracking-[0.2em] uppercase group-hover:text-[#ff1744] transition-colors">
+                            Jay Nalam
+                        </span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#ff1744] animate-ping" />
                     </Link>
+                </div>
+
+                {/* Right: Clean Cyberpunk Navigation Links (Matching HUMAN NEXT) */}
+                <nav className="hidden md:flex items-center gap-8 text-[11px] font-mono tracking-[0.25em] uppercase text-zinc-400">
+                    {navLinks.map((link) => {
+                        if (link.external) {
+                            return (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-white transition-colors duration-200"
+                                >
+                                    {link.name}
+                                </a>
+                            );
+                        }
+                        if (link.isRoute) {
+                            return (
+                                <Link
+                                    key={link.name}
+                                    to={link.href}
+                                    className={`hover:text-white transition-colors duration-200 ${
+                                        location.pathname === "/contact"
+                                            ? "text-[#ff1744] font-bold"
+                                            : ""
+                                    }`}
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        }
+                        return (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="hover:text-white transition-colors duration-200"
+                            >
+                                {link.name}
+                            </a>
+                        );
+                    })}
+
+                    {/* Search Icon (Exact from HUMAN NEXT header) */}
+                    <a
+                        href="#systems"
+                        className="text-zinc-400 hover:text-white transition-colors ml-2"
+                        title="Search Systems"
+                    >
+                        <BsSearch size={14} />
+                    </a>
                 </nav>
             </div>
+
+            {/* Mobile Dropdown */}
+            {mobileMenuOpen && (
+                <div className="md:hidden border-b border-white/10 bg-black/95 px-8 py-5 space-y-4 font-mono text-xs uppercase tracking-widest">
+                    {navLinks.map((link) => {
+                        if (link.external) {
+                            return (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="block text-zinc-300 hover:text-[#ff1744] py-1"
+                                >
+                                    {link.name} ↗
+                                </a>
+                            );
+                        }
+                        if (link.isRoute) {
+                            return (
+                                <Link
+                                    key={link.name}
+                                    to={link.href}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="block text-zinc-300 hover:text-[#ff1744] py-1"
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        }
+                        return (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="block text-zinc-300 hover:text-[#ff1744] py-1"
+                            >
+                                {link.name}
+                            </a>
+                        );
+                    })}
+                </div>
+            )}
         </header>
     );
 };
