@@ -56,7 +56,7 @@ const Hero = () => {
                             <a
                                 href="#case-studies"
                                 onClick={(e) => handleScrollClick(e, "#case-studies")}
-                                className="inline-flex items-center gap-3 px-6 py-2.5 rounded-lg bg-[#ff1744] text-black font-mono font-bold text-xs tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-[0_0_25px_rgba(255,23,68,0.5)] cursor-pointer"
+                                className="inline-flex items-center gap-3 px-6 py-2.5 rounded-lg bg-[#ff1744] text-black font-mono font-bold text-xs tracking-wider uppercase hover:bg-white active:scale-[0.97] transition-[transform,background-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] shadow-[0_0_25px_rgba(255,23,68,0.5)] cursor-pointer"
                             >
                                 <span>VIEW PROJECTS</span>
                                 <BsArrowRight size={14} />
@@ -136,7 +136,7 @@ const Hero = () => {
                 <a
                     href="#case-studies"
                     onClick={(e) => handleScrollClick(e, "#case-studies")}
-                    className="hover:text-white transition-colors flex items-center gap-1 text-zinc-400 cursor-pointer"
+                    className="hover:text-white active:scale-95 transition-[transform,color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] flex items-center gap-1 text-zinc-400 cursor-pointer"
                 >
                     <span>SCROLL TO EXPLORE</span>
                     <BsArrowRight size={12} />

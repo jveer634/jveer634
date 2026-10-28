@@ -64,7 +64,7 @@ const Contact = () => {
                     src={AnimeMeCutout}
                     alt=""
                     aria-hidden="true"
-                    className="w-auto h-[90vh] max-w-[95vw] object-contain object-center opacity-50 filter  contrast-125 brightness-"
+                    className="w-auto h-[90vh] max-w-[95vw] object-contain object-center opacity-50 filter contrast-125 brightness-105"
                 />
             </div>
 
@@ -73,11 +73,11 @@ const Contact = () => {
                 <div className="mb-4">
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-zinc-400 hover:text-[#ff1744] transition-colors group cursor-pointer"
+                        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-zinc-400 hover:text-[#ff1744] active:scale-95 transition-[transform,color] duration-150 group cursor-pointer"
                     >
                         <BsArrowLeft
                             size={14}
-                            className="group-hover:-translate-x-1 transition-transform"
+                            className="group-hover:-translate-x-1 transition-transform duration-150"
                         />
                         <span>RETURN TO OVERVIEW</span>
                     </Link>
@@ -136,7 +136,7 @@ const Contact = () => {
                                 <button
                                     type="button"
                                     onClick={handleCopyEmail}
-                                    className="px-2.5 py-1 rounded-none bg-white/[0.06] hover:bg-[#ff1744] hover:text-black text-[10px] uppercase font-bold tracking-wider transition-colors cursor-pointer shrink-0 ml-2"
+                                    className="px-2.5 py-1 rounded-none bg-white/[0.06] hover:bg-[#ff1744] hover:text-black active:scale-90 text-[10px] uppercase font-bold tracking-wider transition-[transform,background-color,color] duration-120 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer shrink-0 ml-2"
                                     title="Copy email address"
                                 >
                                     {copiedEmail ? (
@@ -162,7 +162,7 @@ const Contact = () => {
                                         href="https://www.linkedin.com/in/jveernalam/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-zinc-400 hover:text-[#ff1744] transition-colors p-1"
+                                        className="text-zinc-400 hover:text-[#ff1744] active:scale-90 transition-[transform,color] duration-150 p-1"
                                         title="LinkedIn"
                                     >
                                         <BsLinkedin size={15} />
@@ -171,7 +171,7 @@ const Contact = () => {
                                         href="https://www.github.com/jveer634/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-zinc-400 hover:text-[#8b5cf6] transition-colors p-1"
+                                        className="text-zinc-400 hover:text-[#8b5cf6] active:scale-90 transition-[transform,color] duration-150 p-1"
                                         title="GitHub"
                                     >
                                         <BsGithub size={15} />
@@ -180,7 +180,7 @@ const Contact = () => {
                                         href="https://blog.jnalam.dev"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-zinc-400 hover:text-white transition-colors p-1"
+                                        className="text-zinc-400 hover:text-white active:scale-90 transition-[transform,color] duration-150 p-1"
                                         title="Web3 Blog"
                                     >
                                         <BsBook size={15} />
@@ -202,7 +202,7 @@ const Contact = () => {
                                             name="user_name"
                                             required
                                             placeholder="Satoshi Nakamoto"
-                                            className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] hover:border-white/20 transition-colors"
+                                            className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] focus:shadow-[0_0_15px_rgba(255,23,68,0.25)] hover:border-white/20 transition-[border-color,box-shadow] duration-150 ease-out"
                                         />
                                     </div>
 
@@ -215,7 +215,7 @@ const Contact = () => {
                                             name="user_email"
                                             required
                                             placeholder="satoshi@bitcoin.org"
-                                            className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] hover:border-white/20 transition-colors"
+                                            className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] focus:shadow-[0_0_15px_rgba(255,23,68,0.25)] hover:border-white/20 transition-[border-color,box-shadow] duration-150 ease-out"
                                         />
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@ const Contact = () => {
                                         type="text"
                                         name="subject"
                                         placeholder="Senior Systems Engineer / Low-Latency Engine"
-                                        className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] hover:border-white/20 transition-colors"
+                                        className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] focus:shadow-[0_0_15px_rgba(255,23,68,0.25)] hover:border-white/20 transition-[border-color,box-shadow] duration-150 ease-out"
                                     />
                                 </div>
 
@@ -241,13 +241,13 @@ const Contact = () => {
                                         rows={5}
                                         required
                                         placeholder="Describe your system throughput goals, consensus challenges, or infrastructure requirements..."
-                                        className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] hover:border-white/20 transition-colors resize-none"
+                                        className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] focus:shadow-[0_0_15px_rgba(255,23,68,0.25)] hover:border-white/20 transition-[border-color,box-shadow] duration-150 ease-out resize-none"
                                     ></textarea>
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full py-3.5 px-6 rounded-none bg-[#ff1744] hover:bg-white text-black font-mono font-bold text-xs tracking-widest uppercase transition-all duration-300 shadow-[0_0_25px_rgba(255,23,68,0.4)] flex items-center justify-center gap-2 cursor-pointer"
+                                    className="w-full py-3.5 px-6 rounded-none bg-[#ff1744] hover:bg-white active:scale-[0.98] text-black font-mono font-bold text-xs tracking-widest uppercase transition-[transform,background-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] shadow-[0_0_25px_rgba(255,23,68,0.4)] flex items-center justify-center gap-2 cursor-pointer"
                                 >
                                     <span>SEND</span>
                                     <BsArrowRight size={14} />

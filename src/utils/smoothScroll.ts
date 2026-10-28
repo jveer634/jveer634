@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollToPlugin);
  * @param target Selector string (e.g. '#overview', '#case-studies'), HTMLElement, or number (pixels)
  * @param duration Duration in seconds (default 1.25)
  */
-export const smoothScrollTo = (target: string | number | HTMLElement, duration = 1.25) => {
+export const smoothScrollTo = (target: string | number | HTMLElement, duration = 0.65) => {
     let targetElement: HTMLElement | number | null = null;
 
     if (typeof target === "string") {
@@ -30,7 +30,7 @@ export const smoothScrollTo = (target: string | number | HTMLElement, duration =
             offsetY: 75,
             autoKill: true,
         },
-        ease: "power3.inOut",
+        ease: "power3.out",
         overwrite: "auto",
     });
 };

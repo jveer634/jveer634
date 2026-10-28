@@ -85,7 +85,7 @@ const Home = () => {
                         href="https://www.linkedin.com/in/jveernalam/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#ff1744] flex items-center gap-1.5 transition-colors"
+                        className="hover:text-[#ff1744] active:scale-95 flex items-center gap-1.5 transition-[transform,color] duration-150"
                     >
                         <BsLinkedin size={15} />
                         <span>LinkedIn</span>
@@ -94,7 +94,7 @@ const Home = () => {
                         href="https://www.github.com/jveer634/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#8b5cf6] flex items-center gap-1.5 transition-colors"
+                        className="hover:text-[#8b5cf6] active:scale-95 flex items-center gap-1.5 transition-[transform,color] duration-150"
                     >
                         <BsGithub size={15} />
                         <span>GitHub</span>
@@ -103,7 +103,7 @@ const Home = () => {
                         href="https://blog.jnalam.dev"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white flex items-center gap-1.5 transition-colors"
+                        className="hover:text-white active:scale-95 flex items-center gap-1.5 transition-[transform,color] duration-150"
                     >
                         <BsBook size={15} />
                         <span>Web3 Engineering Blog</span>

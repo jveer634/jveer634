@@ -288,9 +288,9 @@ const ExperienceTimeline = () => {
                 </div>
 
                 {/* 3. Right Column: Crimson Crystal Quote Card (Glassmorphic) */}
-                <div className="exp-col lg:col-span-3 rounded-3xl bg-gradient-to-br from-[#ff1744]/30 via-[#991b1b]/35 to-[#8b5cf6]/25 border border-[#ff1744]/40 p-8 text-white flex flex-col justify-between shadow-[0_20px_50px_rgba(255,23,68,0.25),inset_0_1px_2px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_60px_rgba(255,23,68,0.35),inset_0_1px_2px_rgba(255,255,255,0.4)] backdrop-blur-3xl relative overflow-hidden group transition-all duration-500 min-h-[480px]">
+                <div className="exp-col lg:col-span-3 rounded-3xl bg-gradient-to-br from-[#ff1744]/30 via-[#991b1b]/35 to-[#8b5cf6]/25 border border-[#ff1744]/40 p-8 text-white flex flex-col justify-between shadow-[0_20px_50px_rgba(255,23,68,0.25),inset_0_1px_2px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_60px_rgba(255,23,68,0.35),inset_0_1px_2px_rgba(255,255,255,0.4)] backdrop-blur-3xl relative overflow-hidden group transition-[box-shadow,border-color] duration-250 ease-[cubic-bezier(0.23,1,0.32,1)] min-h-[480px]">
                     {/* Atmospheric sheen glow */}
-                    <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-[#ff1744]/30 blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700" />
+                    <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-[#ff1744]/30 blur-3xl pointer-events-none group-hover:scale-115 transition-transform duration-250 ease-[cubic-bezier(0.23,1,0.32,1)]" />
                     <div className="absolute -bottom-20 -left-20 w-48 h-48 rounded-full bg-[#8b5cf6]/30 blur-3xl pointer-events-none" />
 
                     {/* Quotation Content */}
@@ -322,7 +322,7 @@ const ExperienceTimeline = () => {
 
                         <a
                             href="#contact"
-                            className="block text-center py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white text-white hover:text-black font-mono text-[11px] uppercase tracking-widest font-bold border border-white/20 transition-all duration-300 backdrop-blur-md shadow-md"
+                            className="block text-center py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white text-white hover:text-black font-mono text-[11px] uppercase tracking-widest font-bold border border-white/20 active:scale-[0.97] transition-[transform,background-color,color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] backdrop-blur-md shadow-md cursor-pointer"
                         >
                             LET'S ARCHITECT TOGETHER ✦
                         </a>

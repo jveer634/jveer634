@@ -30,7 +30,7 @@ const CaseStudies = () => {
     const [activePercentile, setActivePercentile] = useState(latencyPercentiles[0]);
     const [activeChain, setActiveChain] = useState<"eth" | "sol" | "sui">("sol");
 
-    // 3D Card Tilt Effect handler
+    // 3D Card Tilt Effect handler with dampened tracking and smooth settling
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const card = e.currentTarget;
         const rect = card.getBoundingClientRect();
@@ -39,11 +39,13 @@ const CaseStudies = () => {
         const tiltX = (y / (rect.height / 2)) * -4;
         const tiltY = (x / (rect.width / 2)) * 4;
 
+        card.style.transition = "transform 80ms ease-out";
         card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-4px)`;
     };
 
     const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
         const card = e.currentTarget;
+        card.style.transition = "transform 250ms cubic-bezier(0.23, 1, 0.32, 1)";
         card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
     };
 
@@ -208,7 +210,7 @@ const CaseStudies = () => {
                                         <button
                                             key={p.label}
                                             onClick={() => setActivePercentile(p)}
-                                            className={`text-[10px] font-mono px-2 py-0.5 rounded transition-all ${
+                                            className={`text-[10px] font-mono px-2 py-0.5 rounded active:scale-95 transition-[transform,background-color,color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer ${
                                                 activePercentile.label === p.label
                                                     ? "bg-[#ff1744] text-white font-bold shadow-[0_0_10px_#ff1744]"
                                                     : "bg-white/[0.04] text-zinc-400 hover:text-white hover:bg-white/[0.08]"
@@ -426,7 +428,10 @@ const CaseStudies = () => {
 
                     <div className="pt-4 border-t border-white/[0.08] mt-4 flex items-center justify-between text-xs font-mono text-zinc-400">
                         <span className="flex items-center gap-1.5 text-emerald-400">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                            <span className="relative flex h-2 w-2 items-center justify-center">
+                                <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-40 animate-pulse-subtle" />
+                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
+                            </span>
                             Hardware Sympathy Verified
                         </span>
                         <span>x86-64 SIMD</span>
@@ -583,7 +588,7 @@ const CaseStudies = () => {
                                         <button
                                             key={chain}
                                             onClick={() => setActiveChain(chain)}
-                                            className={`uppercase px-2 py-0.5 rounded text-[10px] transition-colors ${
+                                            className={`uppercase px-2 py-0.5 rounded text-[10px] active:scale-95 transition-[transform,background-color,color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer ${
                                                 activeChain === chain
                                                     ? "bg-cyan-500 text-black font-bold"
                                                     : "bg-white/[0.04] text-zinc-400 hover:text-white"

@@ -342,7 +342,7 @@ const ArchitecturalDossier = () => {
                                     href={work.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="work-card rounded-none border border-white/[0.08] bg-white/[0.02] hover:border-white/25 hover:bg-white/[0.04] p-4 flex flex-col justify-between transition-all duration-300 group shadow-md cursor-pointer"
+                                    className="work-card rounded-none border border-white/[0.08] bg-white/[0.02] hover:border-white/25 hover:bg-white/[0.04] active:scale-[0.99] p-4 flex flex-col justify-between transition-[transform,border-color,background-color] duration-180 ease-[cubic-bezier(0.23,1,0.32,1)] group shadow-md cursor-pointer"
                                 >
                                     {CardContent}
                                 </a>
@@ -542,7 +542,7 @@ const ArchitecturalDossier = () => {
                         <div className="pt-2">
                             <Link
                                 to="/contact"
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 py-3 px-6 rounded-none bg-[#ff1744] hover:bg-white text-black font-mono font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(255,23,68,0.3)] cursor-pointer"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 py-3 px-6 rounded-none bg-[#ff1744] hover:bg-white active:scale-[0.97] text-black font-mono font-bold text-xs uppercase tracking-wider transition-[transform,background-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] shadow-[0_0_20px_rgba(255,23,68,0.3)] cursor-pointer"
                             >
                                 <span>DISCUSS SYSTEM ARCHITECTURE</span>
                                 <span className="text-sm font-bold">↗</span>

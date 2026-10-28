@@ -92,7 +92,10 @@ const InteractiveExplorer = () => {
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
                 <div className="inline-flex items-center gap-2 text-xs uppercase font-mono tracking-[0.25rem] text-[#ff1744] font-bold bg-[#ff1744]/10 px-3.5 py-1 rounded-full border border-[#ff1744]/25">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff1744] animate-ping" />
+                    <span className="relative flex h-2 w-2 items-center justify-center">
+                        <span className="absolute inline-flex h-full w-full rounded-full bg-[#ff1744] opacity-50 animate-pulse-subtle" />
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#ff1744]" />
+                    </span>
                     <span>SYS.02 // ARCHITECTURAL DOSSIER</span>
                 </div>
                 <h2 className="text-3xl md:text-5xl font-syne font-extrabold text-zinc-100 tracking-tight uppercase">
@@ -114,7 +117,7 @@ const InteractiveExplorer = () => {
                         <button
                             key={tab.key}
                             onClick={() => setActiveTab(tab.key)}
-                            className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs font-mono tracking-wider transition-all duration-300 ${
+                            className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs font-mono tracking-wider active:scale-[0.97] transition-[transform,background-color,color,box-shadow] duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer ${
                                 isActive
                                     ? "bg-[#ff1744] text-white shadow-lg shadow-[#ff1744]/30"
                                     : "text-zinc-400 hover:text-white hover:bg-white/[0.04]"
@@ -160,7 +163,7 @@ const InteractiveExplorer = () => {
                                 href="https://github.com/jveer634/matcher"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-[#272d3c] hover:border-indigo-500/50 text-xs font-mono text-zinc-200 hover:text-white transition-all shrink-0"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-[#272d3c] hover:border-indigo-500/50 text-xs font-mono text-zinc-200 hover:text-white active:scale-[0.97] transition-[transform,border-color,background-color,color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] shrink-0"
                             >
                                 <BsGithub size={15} />
                                 <span>github.com/jveer634/matcher ↗</span>
@@ -333,7 +336,7 @@ const InteractiveExplorer = () => {
                                 <button
                                     key={key}
                                     onClick={() => setSelectedService(key)}
-                                    className={`p-3.5 rounded-xl border text-left transition-all duration-200 ${
+                                    className={`p-3.5 rounded-xl border text-left active:scale-[0.97] transition-[transform,border-color,background-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer ${
                                         selectedService === key
                                             ? "border-indigo-500 bg-indigo-600/10 shadow-md"
                                             : "border-[#272d3c] bg-[#151821] hover:border-zinc-700"

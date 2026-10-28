@@ -19,7 +19,7 @@ function App() {
                 const targetElement = document.getElementById(href.substring(1));
                 if (targetElement) {
                     e.preventDefault();
-                    smoothScrollTo(href, 1.25);
+                    smoothScrollTo(href);
                     window.history.pushState(null, "", href);
                 }
             }
@@ -32,7 +32,7 @@ function App() {
     return (
         <section className=" font-lora overflow-x-hidden">
             <Nav />
-            <ToastContainer limit={2} hideProgressBar={true} />
+            <ToastContainer theme="dark" limit={2} hideProgressBar={true} />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>

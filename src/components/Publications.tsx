@@ -93,7 +93,7 @@ const Publications = () => {
                         href={article.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col justify-between p-6 rounded-2xl bg-[#0e0e14] border border-white/[0.08] hover:border-[#ff1744]/40 backdrop-blur-md transition-all duration-300 hover:translate-y-[-3px] hover:shadow-xl hover:shadow-[#ff1744]/5 space-y-5"
+                        className="group flex flex-col justify-between p-6 rounded-2xl bg-[#0e0e14] border border-white/[0.08] hover:border-[#ff1744]/40 active:scale-[0.99] backdrop-blur-md transition-[transform,border-color,box-shadow] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:translate-y-[-3px] hover:shadow-xl hover:shadow-[#ff1744]/5 space-y-5"
                     >
                         <div className="space-y-3">
                             <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400">
@@ -113,7 +113,7 @@ const Publications = () => {
                                 </span>
                             )}
 
-                            <h3 className="text-base font-syne font-bold text-zinc-100 group-hover:text-[#ff1744] transition-colors duration-300 leading-snug">
+                            <h3 className="text-base font-syne font-bold text-zinc-100 group-hover:text-[#ff1744] transition-colors duration-150 leading-snug">
                                 {article.title}
                             </h3>
 
@@ -138,7 +138,7 @@ const Publications = () => {
                                 <span>Read on Hashnode</span>
                                 <BsArrowUpRight
                                     size={13}
-                                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-150"
                                 />
                             </div>
                         </div>
@@ -152,7 +152,7 @@ const Publications = () => {
                     href="https://blog.jnalam.dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#0e1017] hover:bg-[#151821] border border-[#272d3c] hover:border-indigo-500/50 text-xs font-display font-bold uppercase tracking-wider text-zinc-200 hover:text-white transition-all shadow-lg"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#0e1017] hover:bg-[#151821] border border-[#272d3c] hover:border-indigo-500/50 active:scale-[0.97] text-xs font-display font-bold uppercase tracking-wider text-zinc-200 hover:text-white transition-[transform,background-color,border-color,color] duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] shadow-lg cursor-pointer"
                 >
                     <span>Explore All 38 Publications on Web3 Engineering</span>
                     <BsArrowUpRight size={14} className="text-indigo-400" />
