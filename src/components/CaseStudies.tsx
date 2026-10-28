@@ -131,7 +131,7 @@ const CaseStudies = () => {
                             SYSTEM ARCHITECTURE BENTO
                         </span>
                     </div>
-                    <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl tracking-wider uppercase text-white">
+                    <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl tracking-wider uppercase text-white text-balance">
                         ENGINEERING CASE STUDIES
                     </h2>
                 </div>
@@ -181,13 +181,13 @@ const CaseStudies = () => {
                                 <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-400">
                                     SYS.01 // ULTRA LOW-LATENCY SYSTEMS
                                 </div>
-                                <h3 className="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-none mt-0.5">
+                                <h3 className="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-none mt-0.5 text-balance">
                                     matcher: Sub-Microsecond Rust Financial Trading Engine
                                 </h3>
                             </div>
                         </div>
 
-                        <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed mb-6 max-w-2xl">
+                        <p className="text-sm text-zinc-300 font-normal leading-relaxed mb-6 max-w-2xl">
                             Single-core in-memory limit orderbook utilizing Simple Binary Encoding
                             (SBE) zero-copy deserialization and sequential Write-Ahead Log (WAL)
                             memory pre-allocation.
@@ -278,34 +278,34 @@ const CaseStudies = () => {
                             {/* Active Metric Reading HUD */}
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-white/[0.06] mt-2">
                                 <div>
-                                    <div className="text-[9px] font-mono text-zinc-500 uppercase">
+                                    <div className="text-[9px] font-mono text-zinc-400 uppercase">
                                         Percentile
                                     </div>
-                                    <div className="text-sm font-mono font-bold text-white">
+                                    <div className="text-sm font-mono font-bold text-white tabular-nums">
                                         {activePercentile.label}
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="text-[9px] font-mono text-zinc-500 uppercase">
+                                    <div className="text-[9px] font-mono text-zinc-400 uppercase">
                                         Roundtrip
                                     </div>
-                                    <div className="text-sm font-mono font-bold text-[#ff1744]">
+                                    <div className="text-sm font-mono font-bold text-[#ff1744] tabular-nums">
                                         {activePercentile.latency}
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="text-[9px] font-mono text-zinc-500 uppercase">
+                                    <div className="text-[9px] font-mono text-zinc-400 uppercase">
                                         Throughput
                                     </div>
-                                    <div className="text-sm font-mono font-bold text-zinc-200">
+                                    <div className="text-sm font-mono font-bold text-zinc-200 tabular-nums">
                                         {activePercentile.ops}
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="text-[9px] font-mono text-zinc-500 uppercase">
+                                    <div className="text-[9px] font-mono text-zinc-400 uppercase">
                                         Heap Alloc
                                     </div>
-                                    <div className="text-sm font-mono font-bold text-emerald-400">
+                                    <div className="text-sm font-mono font-bold text-emerald-400 tabular-nums">
                                         {activePercentile.alloc}
                                     </div>
                                 </div>

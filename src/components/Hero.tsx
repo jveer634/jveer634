@@ -30,7 +30,7 @@ const Hero = () => {
                             Hello, I'm
                         </div>
 
-                        <h2 className="font-bebas text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl leading-[0.85] tracking-wide text-white uppercase select-none">
+                        <h2 className="font-bebas text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl leading-[0.85] tracking-wide text-white uppercase select-none text-balance">
                             JAY
                             <br />
                             NALAM
@@ -40,7 +40,7 @@ const Hero = () => {
                             BACKEND & BLOCKCHAIN ENGINEER
                         </div>
 
-                        <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed max-w-sm pt-1">
+                        <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed max-w-sm pt-1">
                             I architect high-throughput distributed systems, sub-microsecond Rust
                             matching engines, and robust cross-chain infrastructure.
                         </p>
@@ -88,15 +88,15 @@ const Hero = () => {
                                 <span>✦ REALITY OVER ILLUSION</span>
                             </div>
                             <p className="text-[11px] text-zinc-400 font-light leading-snug">
-                                "Wake up to reality. Wherever there is light in this world, there
-                                are also shadows to be found."
+                                “Wake up to reality. Wherever there is light in this world, there
+                                are also shadows to be found.”
                             </p>
                         </div>
 
                         {/* Vertical Stacked Stats (Exact from Reference) */}
                         <div className="space-y-5 pt-2">
                             <div>
-                                <div className="font-bebas text-5xl sm:text-6xl text-[#ff1744] leading-none tracking-tight">
+                                <div className="font-bebas text-5xl sm:text-6xl text-[#ff1744] leading-none tracking-tight tabular-nums">
                                     717K+
                                 </div>
                                 <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mt-1">
@@ -105,7 +105,7 @@ const Hero = () => {
                             </div>
 
                             <div>
-                                <div className="font-bebas text-5xl sm:text-6xl text-white leading-none tracking-tight">
+                                <div className="font-bebas text-5xl sm:text-6xl text-white leading-none tracking-tight tabular-nums">
                                     8,000+
                                 </div>
                                 <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mt-1">
@@ -114,7 +114,7 @@ const Hero = () => {
                             </div>
 
                             <div>
-                                <div className="font-bebas text-5xl sm:text-6xl text-[#8b5cf6] leading-none tracking-tight">
+                                <div className="font-bebas text-5xl sm:text-6xl text-[#8b5cf6] leading-none tracking-tight tabular-nums">
                                     9+
                                 </div>
                                 <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mt-1">

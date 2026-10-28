@@ -98,11 +98,11 @@ const InteractiveExplorer = () => {
                     </span>
                     <span>SYS.02 // ARCHITECTURAL DOSSIER</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-syne font-extrabold text-zinc-100 tracking-tight uppercase">
+                <h2 className="text-3xl md:text-5xl font-syne font-extrabold text-zinc-100 tracking-tight uppercase text-balance">
                     Interactive Systems & Benchmarks
                 </h2>
                 <p className="text-xs md:text-sm font-mono text-zinc-400 font-light italic max-w-2xl mx-auto">
-                    "Power is not will. It is the phenomenon of physically making things happen." —
+                    “Power is not will. It is the phenomenon of physically making things happen.” —
                     Inspect single-core microsecond percentiles and zero-trust microservice
                     topologies.
                 </p>
@@ -149,10 +149,10 @@ const InteractiveExplorer = () => {
                                 <span className="text-[11px] font-mono uppercase tracking-wider text-[#ff1744] bg-[#ff1744]/10 px-2.5 py-1 rounded-md border border-[#ff1744]/25">
                                     Sub-Microsecond Determinism
                                 </span>
-                                <h3 className="text-2xl font-display font-bold text-zinc-100 mt-2">
+                                <h3 className="text-2xl font-display font-bold text-zinc-100 mt-2 text-balance">
                                     matcher: Sub-Microsecond Rust Financial Trading Engine
                                 </h3>
-                                <p className="text-sm text-zinc-400 font-light mt-1">
+                                <p className="text-sm text-zinc-400 font-normal mt-1 leading-relaxed">
                                     Single-threaded sharded order book with Simple Binary Encoding
                                     (SBE) zero-copy deserialization and sequential Write-Ahead Log
                                     (WAL).
@@ -173,10 +173,10 @@ const InteractiveExplorer = () => {
                         {/* Benchmark Stat Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono">
                             <div className="p-4 rounded-xl bg-[#151821] border border-[#272d3c]">
-                                <span className="text-xs text-zinc-500 block">
+                                <span className="text-xs text-zinc-400 block">
                                     Single-Core Throughput
                                 </span>
-                                <span className="text-2xl font-extrabold text-emerald-400 mt-1 block">
+                                <span className="text-2xl font-extrabold text-emerald-400 mt-1 block tabular-nums">
                                     717,000
                                 </span>
                                 <span className="text-[11px] text-zinc-400">
@@ -185,10 +185,10 @@ const InteractiveExplorer = () => {
                             </div>
 
                             <div className="p-4 rounded-xl bg-[#151821] border border-[#272d3c]">
-                                <span className="text-xs text-zinc-500 block">
+                                <span className="text-xs text-zinc-400 block">
                                     4-Core Sharded Scaling
                                 </span>
-                                <span className="text-2xl font-extrabold text-indigo-400 mt-1 block">
+                                <span className="text-2xl font-extrabold text-indigo-400 mt-1 block tabular-nums">
                                     1,870,000
                                 </span>
                                 <span className="text-[11px] text-zinc-400">
@@ -197,10 +197,10 @@ const InteractiveExplorer = () => {
                             </div>
 
                             <div className="p-4 rounded-xl bg-[#151821] border border-[#272d3c]">
-                                <span className="text-xs text-zinc-500 block">
+                                <span className="text-xs text-zinc-400 block">
                                     Execution Latency (p50)
                                 </span>
-                                <span className="text-2xl font-extrabold text-cyan-400 mt-1 block">
+                                <span className="text-2xl font-extrabold text-cyan-400 mt-1 block tabular-nums">
                                     0.47 µs
                                 </span>
                                 <span className="text-[11px] text-zinc-400">
@@ -209,10 +209,10 @@ const InteractiveExplorer = () => {
                             </div>
 
                             <div className="p-4 rounded-xl bg-[#151821] border border-[#272d3c]">
-                                <span className="text-xs text-zinc-500 block">
+                                <span className="text-xs text-zinc-400 block">
                                     Tail Latency (p99) & RAM
                                 </span>
-                                <span className="text-2xl font-extrabold text-amber-400 mt-1 block">
+                                <span className="text-2xl font-extrabold text-amber-400 mt-1 block tabular-nums">
                                     5.2 µs
                                 </span>
                                 <span className="text-[11px] text-zinc-400">

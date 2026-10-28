@@ -108,11 +108,11 @@ const Contact = () => {
                                 <span className="text-zinc-400 font-normal">ENCRYPTED INBOX</span>
                             </div>
 
-                            <h1 className="font-bebas text-5xl sm:text-6xl md:text-7xl tracking-wide uppercase leading-none text-white">
+                            <h1 className="font-bebas text-5xl sm:text-6xl md:text-7xl tracking-wide uppercase leading-none text-white text-balance">
                                 LET'S WORK <span className="text-[#ff1744]">TOGETHER</span>
                             </h1>
 
-                            <p className="text-zinc-300 font-light text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl">
+                            <p className="text-zinc-300 font-normal text-sm sm:text-base leading-relaxed max-w-2xl">
                                 Available for Senior Backend, Distributed Systems, and Blockchain
                                 Core architecture roles{" "}
                                 <span className="text-[#ff1744] font-mono font-medium">
@@ -194,12 +194,17 @@ const Contact = () => {
                             <form ref={form} onSubmit={handleSubmit} className="space-y-4">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block">
+                                        <label
+                                            htmlFor="user_name"
+                                            className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block cursor-pointer"
+                                        >
                                             YOUR NAME *
                                         </label>
                                         <input
+                                            id="user_name"
                                             type="text"
                                             name="user_name"
+                                            autoComplete="name"
                                             required
                                             placeholder="Satoshi Nakamoto"
                                             className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] focus:shadow-[0_0_15px_rgba(255,23,68,0.25)] hover:border-white/20 transition-[border-color,box-shadow] duration-150 ease-out"
@@ -207,12 +212,18 @@ const Contact = () => {
                                     </div>
 
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block">
+                                        <label
+                                            htmlFor="user_email"
+                                            className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block cursor-pointer"
+                                        >
                                             YOUR EMAIL *
                                         </label>
                                         <input
+                                            id="user_email"
                                             type="email"
                                             name="user_email"
+                                            autoComplete="email"
+                                            spellCheck={false}
                                             required
                                             placeholder="satoshi@bitcoin.org"
                                             className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] focus:shadow-[0_0_15px_rgba(255,23,68,0.25)] hover:border-white/20 transition-[border-color,box-shadow] duration-150 ease-out"
@@ -221,10 +232,14 @@ const Contact = () => {
                                 </div>
 
                                 <div className="space-y-1.5">
-                                    <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block">
+                                    <label
+                                        htmlFor="subject"
+                                        className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block cursor-pointer"
+                                    >
                                         SUBJECT / ARCHITECTURAL ROLE
                                     </label>
                                     <input
+                                        id="subject"
                                         type="text"
                                         name="subject"
                                         placeholder="Senior Systems Engineer / Low-Latency Engine"
@@ -233,14 +248,18 @@ const Contact = () => {
                                 </div>
 
                                 <div className="space-y-1.5">
-                                    <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block">
+                                    <label
+                                        htmlFor="message"
+                                        className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block cursor-pointer"
+                                    >
                                         SPECIFICATION / MESSAGE *
                                     </label>
                                     <textarea
+                                        id="message"
                                         name="message"
                                         rows={5}
                                         required
-                                        placeholder="Describe your system throughput goals, consensus challenges, or infrastructure requirements..."
+                                        placeholder="Describe your system throughput goals, consensus challenges, or infrastructure requirements…"
                                         className="w-full px-4 py-3 rounded-none bg-black/60 border border-white/10 text-xs font-mono text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff1744] focus:shadow-[0_0_15px_rgba(255,23,68,0.25)] hover:border-white/20 transition-[border-color,box-shadow] duration-150 ease-out resize-none"
                                     ></textarea>
                                 </div>
@@ -254,8 +273,8 @@ const Contact = () => {
                                 </button>
                             </form>
 
-                            {/* Telemetry Footer */}
-                            <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-4 mt-4 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-2">
+                            {/* Telemetry Footer with AA contrast compliant text-zinc-400 */}
+                            <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest pt-4 mt-4 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-2">
                                 <span>RESPONSE LATENCY: &lt; 24 HOURS</span>
                                 <span className="text-[#ff1744]">✦ ENCRYPTED IN TRANSIT</span>
                             </div>

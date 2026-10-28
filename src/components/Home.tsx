@@ -54,10 +54,10 @@ const Home = () => {
                     <div className="intro-text opacity-0 font-light text-[#ff1744] text-xs sm:text-sm font-mono tracking-[0.35rem] uppercase">
                         Wake up to reality
                     </div>
-                    <div className="intro-text opacity-0 text-zinc-100 font-syne font-black text-3xl sm:text-5xl md:text-6xl tracking-tight uppercase">
+                    <div className="intro-text opacity-0 text-zinc-100 font-syne font-black text-3xl sm:text-5xl md:text-6xl tracking-tight uppercase text-balance">
                         Absolute Determinism
                     </div>
-                    <div className="intro-text opacity-0 text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] via-purple-300 to-[#ff1744] text-xl sm:text-3xl font-syne font-extrabold uppercase tracking-wide">
+                    <div className="intro-text opacity-0 text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] via-purple-300 to-[#ff1744] text-xl sm:text-3xl font-syne font-extrabold uppercase tracking-wide text-balance">
                         & Sub-Microsecond Architecture
                     </div>
                 </div>
@@ -75,8 +75,8 @@ const Home = () => {
                     <span>© {new Date().getFullYear()} Jay Nalam.</span>
                     <span className="hidden sm:inline text-zinc-600">•</span>
                     <span className="text-zinc-400 italic">
-                        "Power is not will. It is the phenomenon of physically making things
-                        happen." — Madara Uchiha
+                        “Power is not will. It is the phenomenon of physically making things
+                        happen.” — Madara Uchiha
                     </span>
                 </div>
 

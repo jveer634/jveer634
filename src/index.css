@@ -1,12 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
 @import "tailwindcss";
 @config "../tailwind.config.js";
-
-@font-face {
-    font-family: "Nostalgia";
-    src: url(./assets/Nostalgia.otf) format("opentype");
-}
 
 :root {
     /* =========================================================================
@@ -40,6 +33,13 @@
     }
     body {
         @apply bg-[#040406] text-zinc-100 antialiased font-sans selection:bg-[#ff1744]/25 selection:text-[#ff1744];
+    }
+    :focus-visible {
+        outline: none;
+        box-shadow:
+            0 0 0 2px #040406,
+            0 0 0 4px #ff1744;
+        border-radius: 4px;
     }
 }
 

@@ -10,9 +10,6 @@ export default {
                 caveat: ["Caveat", "cursive"],
                 syne: ["Syne", "sans-serif"],
                 mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
-                poppins: ["Poppins", "sans-serif"],
-                nostalgia: ["Nostalgia", "sans-serif"],
-                lora: ["Lora", "sans-serif"],
             },
             colors: {
                 canvas: "var(--color-canvas)",

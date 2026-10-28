@@ -369,7 +369,7 @@ const ArchitecturalDossier = () => {
                     >
                         <div>
                             <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-wider text-white flex items-center gap-2">
+                                <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-wider text-white flex items-center gap-2 text-balance">
                                     <span>EXPERIENCE & EDUCATION</span>
                                     <span className="text-[#ff1744]">—</span>
                                 </h3>
@@ -489,11 +489,11 @@ const ArchitecturalDossier = () => {
                     {/* Right: Production Toolchain & Architectural Call to Action (Cols 6-12) */}
                     <div className="lg:col-span-7 p-6 sm:p-8 md:p-10 lg:border-l lg:border-white/[0.08] flex flex-col justify-between space-y-6">
                         <div className="space-y-3">
-                            <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-wider text-white flex items-center gap-2">
+                            <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-wider text-white flex items-center gap-2 text-balance">
                                 <span>PRODUCTION TOOLCHAIN & STACK</span>
                                 <span className="text-[#ff1744]">—</span>
                             </h3>
-                            <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
+                            <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
                                 Available for Senior Backend, Distributed Systems, and Blockchain
                                 engineering roles{" "}
                                 <span className="text-[#ff1744] font-mono font-medium">
@@ -507,7 +507,7 @@ const ArchitecturalDossier = () => {
                         <div className="space-y-4">
                             <div className="text-[10px] font-mono uppercase tracking-widest text-[#ff1744] font-bold flex items-center justify-between">
                                 <span>VERIFIED PRODUCTION STACK</span>
-                                <span className="text-zinc-500">L4 ARCHITECTURE</span>
+                                <span className="text-zinc-400">L4 ARCHITECTURE</span>
                             </div>
 
                             <div className="flex flex-wrap gap-2">

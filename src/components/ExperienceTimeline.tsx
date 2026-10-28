@@ -134,7 +134,7 @@ const ExperienceTimeline = () => {
             <div className="exp-header flex items-center justify-between gap-4 border-b border-white/[0.08] pb-5 mb-12 relative z-10">
                 <div className="flex items-center gap-3">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#8b5cf6] shadow-[0_0_12px_#8b5cf6]" />
-                    <h2 className="font-bebas text-3xl sm:text-4xl md:text-5xl tracking-wider uppercase text-white">
+                    <h2 className="font-bebas text-3xl sm:text-4xl md:text-5xl tracking-wider uppercase text-white text-balance">
                         EXPERIENCE & ARCHITECTURAL PROCESS
                     </h2>
                 </div>
@@ -302,7 +302,7 @@ const ExperienceTimeline = () => {
                             Power is not will. It is the phenomenon of physically making things
                             happen.
                         </p>
-                        <p className="text-xs font-light text-red-100/90 leading-relaxed">
+                        <p className="text-sm font-normal text-red-100/95 leading-relaxed">
                             In high-throughput distributed systems, latency spikes and race
                             conditions yield only to deterministic memory architecture and lock-free
                             mechanical sympathy.

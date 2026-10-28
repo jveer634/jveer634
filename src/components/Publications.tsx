@@ -69,7 +69,7 @@ const Publications = () => {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-10 border-b border-white/[0.08]">
                 <div className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#ff1744]" />
-                    <h2 className="font-bebas text-3xl sm:text-4xl tracking-wider uppercase text-white">
+                    <h2 className="font-bebas text-3xl sm:text-4xl tracking-wider uppercase text-white text-balance">
                         TECHNICAL PUBLICATIONS & JOURNAL
                     </h2>
                 </div>
@@ -98,11 +98,11 @@ const Publications = () => {
                         <div className="space-y-3">
                             <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400">
                                 <span className="flex items-center gap-1.5">
-                                    <BsCalendar3 size={11} className="text-zinc-500" />
+                                    <BsCalendar3 size={11} className="text-zinc-400" />
                                     {article.date}
                                 </span>
                                 <span className="flex items-center gap-1 text-zinc-400">
-                                    <BsClock size={11} className="text-zinc-500" />
+                                    <BsClock size={11} className="text-zinc-400" />
                                     {article.readTime}
                                 </span>
                             </div>
@@ -113,11 +113,11 @@ const Publications = () => {
                                 </span>
                             )}
 
-                            <h3 className="text-base font-syne font-bold text-zinc-100 group-hover:text-[#ff1744] transition-colors duration-150 leading-snug">
+                            <h3 className="text-base font-syne font-bold text-zinc-100 group-hover:text-[#ff1744] transition-colors duration-150 leading-snug text-balance">
                                 {article.title}
                             </h3>
 
-                            <p className="text-xs text-zinc-400 font-light leading-relaxed line-clamp-3">
+                            <p className="text-sm text-zinc-400 font-normal leading-relaxed line-clamp-3">
                                 {article.summary}
                             </p>
                         </div>

@@ -30,7 +30,7 @@ function App() {
     }, []);
 
     return (
-        <section className=" font-lora overflow-x-hidden">
+        <section className="font-sans overflow-x-hidden">
             <Nav />
             <ToastContainer theme="dark" limit={2} hideProgressBar={true} />
             <Routes>
